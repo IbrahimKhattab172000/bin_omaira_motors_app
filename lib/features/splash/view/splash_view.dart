@@ -19,27 +19,10 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    // Future.delayed(const Duration(seconds: 3), () {
-    // RouteUtils.navigateAndPopAll(SecondSplashView());
-
-    // if (AppStorage.isLogged) {
-    //   HomeBloc.of(context).add(Get());
-
-    //   RouteUtils.navigateAndPopAll(const HomeView());
-    // } else if (AppStorage.isOnBoardingComplete) {
-    //   HomeBloc.of(context).add(Get());
-
-    //   RouteUtils.navigateAndPopAll(const LoginView());
-    // } else {
-    //   HomeBloc.of(context).add(Get());
-
-    //   RouteUtils.navigateAndPopAll(const OnBoardingView());
-    // }
-    // });
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 4),
     );
     _animation = CurvedAnimation(parent: _controller, curve: Curves.decelerate);
     _controller.forward();
@@ -105,8 +88,8 @@ class AnimatedLogoImage extends StatelessWidget {
     return PlayAnimationBuilder<double>(
       // animation opacity range
       tween: Tween(begin: 0.0, end: 1),
-      duration: const Duration(seconds: 2),
-      curve: Curves.decelerate,
+      duration: const Duration(seconds: 4),
+      curve: Curves.bounceIn,
       builder: (context, value, _) {
         return Positioned(
           top: MediaQuery.sizeOf(context).height * 0.3,
@@ -134,7 +117,7 @@ class AnimatedGhostSplash extends StatelessWidget {
     return PlayAnimationBuilder<double>(
       // animation range
       tween: Tween(begin: -140, end: 80),
-      duration: const Duration(seconds: 1),
+      duration: const Duration(seconds: 4),
 
       curve: Curves.decelerate,
       builder: (context, value, _) {
@@ -170,7 +153,7 @@ class _AnimatedTextState extends State<AnimatedText> {
         begin: -140,
         end: MediaQuery.sizeOf(context).height * 0.12,
       ),
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 4),
 
       curve: Curves.decelerate,
       builder: (context, value, _) {
