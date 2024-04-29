@@ -1,6 +1,8 @@
+import 'package:bin_omaira_motors/features/onboarding/view/view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
 import 'package:bin_omaira_motors/helpers/images.dart';
+import 'package:bin_omaira_motors/helpers/routes.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_text.dart';
 import 'package:flutter/material.dart';
@@ -19,10 +21,13 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
 
   @override
   void initState() {
+    Future.delayed(const Duration(seconds: 6), () {
+      RouteUtils.navigateAndPopAll(const OnBoardingView());
+    });
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 4),
+      duration: const Duration(seconds: 3),
     );
     _animation = CurvedAnimation(parent: _controller, curve: Curves.decelerate);
     _controller.forward();
@@ -87,9 +92,9 @@ class AnimatedLogoImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return PlayAnimationBuilder<double>(
       // animation opacity range
-      tween: Tween(begin: 0.0, end: 1),
-      duration: const Duration(seconds: 4),
-      curve: Curves.bounceIn,
+      tween: Tween(begin: 0, end: 1),
+      duration: const Duration(seconds: 3),
+      curve: Curves.fastOutSlowIn,
       builder: (context, value, _) {
         return Positioned(
           top: MediaQuery.sizeOf(context).height * 0.3,
@@ -117,7 +122,7 @@ class AnimatedGhostSplash extends StatelessWidget {
     return PlayAnimationBuilder<double>(
       // animation range
       tween: Tween(begin: -140, end: 80),
-      duration: const Duration(seconds: 4),
+      duration: const Duration(seconds: 3),
 
       curve: Curves.decelerate,
       builder: (context, value, _) {
@@ -153,7 +158,7 @@ class _AnimatedTextState extends State<AnimatedText> {
         begin: -140,
         end: MediaQuery.sizeOf(context).height * 0.12,
       ),
-      duration: const Duration(seconds: 4),
+      duration: const Duration(seconds: 3),
 
       curve: Curves.decelerate,
       builder: (context, value, _) {
@@ -184,6 +189,10 @@ class _AnimatedTextState extends State<AnimatedText> {
                     ),
                     TextSpan(
                       text: "to your next awesome vehicle",
+                      style: TextStyle(
+                        color: AppColors.white,
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
                   ],
                 ),
@@ -195,15 +204,15 @@ class _AnimatedTextState extends State<AnimatedText> {
                 children: [
                   const AppText(
                     title: "Powered by",
-                    color: AppColors.white,
+                    color: AppColors.gray,
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
                   ),
                   SizedBox(width: 12.width),
                   const AppText(
                     title: "Kian Al-Rqmiah",
-                    color: AppColors.white,
-                    fontWeight: FontWeight.w500,
+                    color: AppColors.gray,
+                    fontWeight: FontWeight.w700,
                     fontSize: 12,
                   ),
                 ],
