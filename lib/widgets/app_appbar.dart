@@ -22,7 +22,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.black,
       elevation: elevation ?? 1,
       iconTheme: const IconThemeData(
         color: AppColors.black,

@@ -1,10 +1,16 @@
 {
+    
+    "welcome_subtitle" : "Signing up takes only 1 min",
+    "skip_intro": "Skip intro",
+    "create_new_account" : "Create New Account",
+    "signin" : "Sign in",
+    "skip_login" : "Skip log in",
+
+    
     "wnes": "Wanes",
     "your_kid_safe_always" : "Your Kid Safe Always!",
     "search_for_the_perfect_encubator" : "Search for the perfect nursery to nurture your child. Explore ratings, reviews, and programs offered by nurseries in your area to make an informed decision.",
     "new_user" : "New User",
-    "login" : "Login",
-    "skip_intro": "Skip intro",
     "continue" : "Continue",
     "the_finest_fresh_produce" : "The Finest Fresh Produce",
     "or" : "Or",
@@ -19,7 +25,6 @@
     "next"  : "Next",
     "email_or_phone" : "Email / Phone Number",
     "no_account" : "Don't have an account?",
-    "create_new_account" : "Create New Account",
     "browse_without_logging_in" : "Browse Without Logging In",
     "new_signing" : "New Signing",
     "name" : "Name",

@@ -17,7 +17,7 @@ class AppButton extends StatelessWidget {
     this.margin = EdgeInsets.zero,
     this.padding,
     this.height,
-    this.titleFontSize = 16,
+    this.titleFontSize = 14,
     this.isLoading = false,
     this.linearColor = false,
   });

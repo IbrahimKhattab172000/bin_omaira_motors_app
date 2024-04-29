@@ -1,3 +1,5 @@
+import 'package:bin_omaira_motors/features/welcome/view/welcome_view.dart';
+import 'package:bin_omaira_motors/helpers/routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:bin_omaira_motors/features/onboarding/models/boarding.dart';
@@ -78,6 +80,7 @@ class OnboardingItem extends StatelessWidget {
           child: InkWell(
             onTap: () {
               if (currentIndex == boarding.length - 1) {
+                RouteUtils.navigateTo(const WelcomeViewScreen());
               } else {
                 boardController.nextPage(
                   duration: const Duration(milliseconds: 750),
@@ -103,11 +106,16 @@ class OnboardingItem extends StatelessWidget {
         Positioned(
             bottom: 40.height,
             right: 24.height,
-            child: AppText(
-              title: "skip_intro".tr(),
-              color: AppColors.white,
-              fontSize: 16,
-              fontWeight: FontWeight.w300,
+            child: InkWell(
+              onTap: () {
+                RouteUtils.navigateTo(const WelcomeViewScreen());
+              },
+              child: AppText(
+                title: "skip_intro".tr(),
+                color: AppColors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.w300,
+              ),
             )),
       ],
     );
