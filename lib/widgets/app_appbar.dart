@@ -27,7 +27,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
       iconTheme: const IconThemeData(
         color: AppColors.black,
       ),
-      leading: leading,
+      leading: leading ?? const SizedBox(),
       centerTitle: true,
 
       // titleSpacing: title == null || title!.isEmpty || !Navigator.canPop(context) ? null : -16,

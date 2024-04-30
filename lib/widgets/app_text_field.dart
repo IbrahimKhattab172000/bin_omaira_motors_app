@@ -16,8 +16,8 @@ class AppTextField extends StatefulWidget {
     this.leading,
     this.label,
     this.maxLines = 1,
-    this.borderColor = Colors.transparent,
-    this.fillColor = AppColors.border,
+    this.borderColor = Colors.grey,
+    this.fillColor = AppColors.black,
     this.onSaved,
     this.onChanged,
     this.controller,
@@ -76,8 +76,11 @@ class _AppTextFieldState extends State<AppTextField> {
           child: AbsorbPointer(
             absorbing: widget.onTap != null,
             child: TextFormField(
+              style: const TextStyle(
+                color: AppColors.white,
+              ),
               controller: widget.controller,
-              cursorColor: AppColors.black,
+              cursorColor: AppColors.white,
               // cursorHeight: double.infinity,
               validator: widget.validator,
               onChanged: widget.onChanged,
@@ -98,26 +101,34 @@ class _AppTextFieldState extends State<AppTextField> {
                 suffixIcon: widget.trailing,
                 prefixIcon: widget.leading,
                 contentPadding: EdgeInsets.symmetric(
-                    horizontal: 12.width, vertical: 8.height),
-                border: _border((widget.transperent ?? false)
-                    ? Colors.transparent
-                    : widget.borderColor),
-                enabledBorder: _border((widget.transperent ?? false)
-                    ? Colors.transparent
-                    : widget.borderColor),
+                  horizontal: 12.width,
+                  vertical: 20.height,
+                ),
+                border: _border(
+                  (widget.transperent ?? false)
+                      ? Colors.transparent
+                      : widget.borderColor,
+                ),
+                enabledBorder: _border(
+                  (widget.transperent ?? false)
+                      ? Colors.transparent
+                      : widget.borderColor,
+                ),
                 focusedBorder: _border(
-                    (widget.transperent ?? false)
-                        ? Colors.transparent
-                        : AppColors.primary,
-                    width: 1),
+                  (widget.transperent ?? false)
+                      ? Colors.transparent
+                      : AppColors.white,
+                  width: 1,
+                ),
                 errorBorder: _border((widget.transperent ?? false)
                     ? Colors.transparent
                     : AppColors.red),
                 focusedErrorBorder: _border(
-                    (widget.transperent ?? false)
-                        ? Colors.transparent
-                        : AppColors.background,
-                    width: 1),
+                  (widget.transperent ?? false)
+                      ? Colors.transparent
+                      : AppColors.white,
+                  width: 1,
+                ),
               ),
             ),
           ),
@@ -136,5 +147,5 @@ class _AppTextFieldState extends State<AppTextField> {
     );
   }
 
-  double get _radius => widget.maxLines > 1 ? 8 : 10;
+  double get _radius => widget.maxLines > 1 ? 15 : 20;
 }

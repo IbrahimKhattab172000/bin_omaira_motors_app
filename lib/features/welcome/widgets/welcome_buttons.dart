@@ -1,5 +1,7 @@
+import 'package:bin_omaira_motors/features/signin/view/signin_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
+import 'package:bin_omaira_motors/helpers/routes.dart';
 import 'package:bin_omaira_motors/widgets/app_button.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +20,9 @@ class WelcomeButtons extends StatelessWidget {
         SizedBox(height: 16.height),
         AppButton(
           title: "signin".tr(),
-          onTap: () {},
+          onTap: () {
+            RouteUtils.navigateTo(const SigninView());
+          },
           color: AppColors.signInButtonColor,
           titleFontSize: 14,
         ),

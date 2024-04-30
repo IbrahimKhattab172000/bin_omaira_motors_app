@@ -26,6 +26,7 @@ class AppCountryPicker extends StatelessWidget {
       flagWidth: 40,
       padding: EdgeInsets.zero,
       barrierColor: AppColors.black.withOpacity(0.8),
+      backgroundColor: AppColors.black,
     );
   }
 }
