@@ -12,7 +12,8 @@
     "forget_password" : "Forgot Password?",
     "no_account" : "Don't have an account?",
     "signup" : "Sign Up",
-
+    "we_will_send_a_code" : "We will send code to your Phone number",
+    "send_verifaction_code" : "Send verification code",
 
 
     "wnes": "Wanes",
