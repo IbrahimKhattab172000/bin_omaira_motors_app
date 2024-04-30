@@ -17,6 +17,13 @@
     "verification_code" : "Verification code",
     "please_enter_verification_code_sent_to_number"  : "Please enter verification code, we sent it to number",
     "confirm" : "Confirm",
+    "create_new_password" : "Create New Password",
+    "please_enter_the_new_password" : "Please enter the new password",
+    "confirm_password" : "Confirm Password",
+    "new_pass_done_title" : "Great! Your password has been changed",
+    "new_pass_done_subtitle" : "Don't worry, We'll let you know if there's a problem with your account",
+    "back_to_login" : "Back to log in",
+
 
 
     "wnes": "Wanes",
@@ -38,7 +45,6 @@
     "name" : "Name",
     "phone" : "Phone",
     "email" : "Email",
-    "confirm_password" : "Confirm Password",
     "i_agree" : "I Agree to",
     "terms_and_conditions" : "Terms and Conditions",
     "have_account" :"Already have an account?",

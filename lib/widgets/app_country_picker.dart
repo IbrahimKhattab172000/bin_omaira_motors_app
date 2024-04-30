@@ -21,12 +21,15 @@ class AppCountryPicker extends StatelessWidget {
       flagDecoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
       ),
+      boxDecoration: const BoxDecoration(
+        color: AppColors.black,
+      ),
       dialogSize: Size(double.infinity, MediaQuery.of(context).size.height / 2),
       hideSearch: true,
       flagWidth: 40,
       padding: EdgeInsets.zero,
-      barrierColor: AppColors.black.withOpacity(0.8),
-      backgroundColor: AppColors.black,
+      barrierColor: AppColors.background.withOpacity(0.8),
+      dialogTextStyle: const TextStyle(color: AppColors.gray),
     );
   }
 }
