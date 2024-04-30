@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
+import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:easy_localization/easy_localization.dart' hide TextDirection;
@@ -39,8 +40,45 @@ class AppPinCodeField extends StatelessWidget {
           // autoDisposeControllers: true,
           // autoDismissKeyboard: true,
           controller: controller,
+          cursor: const Text(
+            "___",
+            style: TextStyle(
+              color: AppColors.white,
+            ),
+          ),
+          focusedPinTheme: PinTheme(
+            textStyle: const TextStyle(
+              color: AppColors.white,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              color: AppColors.background,
+              border: Border.all(
+                color: AppColors.white,
+                width: 1,
+              ),
+            ),
+            height: 64.height,
+            width: 64.width,
+          ),
+          defaultPinTheme: PinTheme(
+            textStyle: const TextStyle(
+              color: AppColors.white,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              color: AppColors.black,
+              border: Border.all(
+                color: AppColors.gray,
+                width: 1,
+              ),
+            ),
+            height: 64.height,
+            width: 64.width,
+          ),
           // enablePinAutofill: true,
           keyboardType: TextInputType.number,
+
           // animationType: AnimationType.fade,
           // textStyle: const TextStyle(
           //   fontSize: 16,

@@ -21,6 +21,7 @@ class _SigninFormsState extends State<SigninForms> {
     return Column(
       children: [
         AppTextField(
+          inputDecorationLable: "phone_number".tr(),
           hint: "phone_number".tr(),
           leading: AppCountryPicker(
             onSelect: (String country, String code) {},
@@ -37,6 +38,7 @@ class _SigninFormsState extends State<SigninForms> {
         ),
         SizedBox(height: 16.height),
         AppTextField(
+          inputDecorationLable: "password".tr(),
           hint: 'password'.tr(),
           secure: isPasswordSecure,
           trailing: InkWell(

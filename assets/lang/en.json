@@ -14,6 +14,9 @@
     "signup" : "Sign Up",
     "we_will_send_a_code" : "We will send code to your Phone number",
     "send_verifaction_code" : "Send verification code",
+    "verification_code" : "Verification code",
+    "please_enter_verification_code_sent_to_number"  : "Please enter verification code, we sent it to number",
+    "confirm" : "Confirm",
 
 
     "wnes": "Wanes",
@@ -45,7 +48,6 @@
     "didnt_recive_the_code" : "Didn't receive the message?",
     "resending_in" : "Resending in",
     "resend_code": "Resend",
-    "confirm" : "Confirm",
     "new_password" : "New Password",
     "confirm_new_password" : "Confirm New Password",
     "resetting_the_password" :"Resetting the Password",

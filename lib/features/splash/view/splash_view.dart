@@ -190,7 +190,7 @@ class _AnimatedTextState extends State<AnimatedText> {
                     TextSpan(
                       text: "to your next awesome vehicle",
                       style: TextStyle(
-                        color: AppColors.white,
+                        color: AppColors.gray,
                         fontWeight: FontWeight.w400,
                       ),
                     ),

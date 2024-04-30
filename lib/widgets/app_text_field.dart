@@ -24,6 +24,7 @@ class AppTextField extends StatefulWidget {
     this.secure = false,
     this.hintColor,
     this.transperent,
+    this.inputDecorationLable,
   });
 
   final String? hint;
@@ -43,6 +44,7 @@ class AppTextField extends StatefulWidget {
   final TextEditingController? controller;
   final Color? hintColor;
   final bool? transperent;
+  final String? inputDecorationLable;
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -90,6 +92,8 @@ class _AppTextFieldState extends State<AppTextField> {
               onSaved: widget.onSaved,
               obscureText: widget.secure,
               decoration: InputDecoration(
+                labelText: widget.inputDecorationLable ?? "",
+                labelStyle: const TextStyle(color: AppColors.gray),
                 hintText: widget.hint ?? '',
                 fillColor: widget.fillColor,
                 filled: true,

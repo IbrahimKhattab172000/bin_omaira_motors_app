@@ -15,7 +15,14 @@ class SigninNoAccount extends StatelessWidget {
       children: [
         AppText(title: "no_account".tr()),
         SizedBox(width: 8.width),
-        AppText(title: "signup".tr()),
+        InkWell(
+          onTap: () {
+            // RouteUtils.navigateTo(Sign);
+          },
+          child: AppText(
+            title: "signup".tr(),
+          ),
+        ),
       ],
     );
   }

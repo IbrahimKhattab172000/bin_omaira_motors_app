@@ -14,6 +14,7 @@ class ForgotPasswordForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppTextField(
+      inputDecorationLable: "phone_number".tr(),
       hint: "phone_number".tr(),
       leading: AppCountryPicker(
         onSelect: (String country, String code) {},

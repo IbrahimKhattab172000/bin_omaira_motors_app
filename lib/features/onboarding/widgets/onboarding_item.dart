@@ -40,7 +40,7 @@ class OnboardingItem extends StatelessWidget {
           right: 24,
           child: AppText(
             title: model.title,
-            color: AppColors.white,
+            color: AppColors.gray,
             fontWeight: FontWeight.w700,
             fontSize: 20,
           ),
@@ -51,7 +51,7 @@ class OnboardingItem extends StatelessWidget {
           right: 24,
           child: AppText(
             title: model.body,
-            color: AppColors.white,
+            color: AppColors.gray,
             fontSize: 16,
             fontWeight: FontWeight.w300,
             textAlign: TextAlign.center,
@@ -112,7 +112,7 @@ class OnboardingItem extends StatelessWidget {
               },
               child: AppText(
                 title: "skip_intro".tr(),
-                color: AppColors.white,
+                color: AppColors.gray,
                 fontSize: 16,
                 fontWeight: FontWeight.w300,
               ),
