@@ -1,4 +1,5 @@
 import 'package:bin_omaira_motors/features/signin/view/signin_view.dart';
+import 'package:bin_omaira_motors/features/signup/view/signup_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
 import 'package:bin_omaira_motors/helpers/routes.dart';
@@ -15,7 +16,9 @@ class WelcomeButtons extends StatelessWidget {
       children: [
         AppButton(
           title: "create_new_account".tr(),
-          onTap: () {},
+          onTap: () {
+            RouteUtils.navigateTo(const SignupView());
+          },
         ),
         SizedBox(height: 16.height),
         AppButton(

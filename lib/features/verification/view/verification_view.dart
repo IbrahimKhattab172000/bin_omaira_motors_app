@@ -1,6 +1,7 @@
 import 'package:bin_omaira_motors/features/verification/widgets/verification_app_bar.dart';
 import 'package:bin_omaira_motors/features/verification/widgets/verification_button.dart';
 import 'package:bin_omaira_motors/features/verification/widgets/verification_pin_code_field.dart';
+import 'package:bin_omaira_motors/features/verification/widgets/verification_resend_code.dart';
 import 'package:bin_omaira_motors/features/verification/widgets/verification_text_info.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
@@ -26,6 +27,8 @@ class VerificationView extends StatelessWidget {
             const VerificationPinCodeField(),
             SizedBox(height: 32.height),
             const VerificationButton(),
+            const Spacer(),
+            const VerificationResendCode(),
             SizedBox(height: Utils.bottomDevicePadding),
           ],
         ),

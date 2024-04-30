@@ -6,6 +6,7 @@ import 'package:bin_omaira_motors/features/signin/widgets/signin_no_account.dart
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
 import 'package:bin_omaira_motors/helpers/routes.dart';
+import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_appbar.dart';
 import 'package:flutter/material.dart';
 
@@ -44,6 +45,7 @@ class SigninView extends StatelessWidget {
               const SigninForgotPassword(),
               SizedBox(height: 40.height),
               const SigninNoAccount(),
+              SizedBox(height: Utils.bottomDevicePadding),
             ],
           ),
         ),
