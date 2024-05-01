@@ -40,7 +40,7 @@ class OnboardingItem extends StatelessWidget {
           right: 24,
           child: AppText(
             title: model.title,
-            color: AppColors.gray,
+            color: AppColors.grey,
             fontWeight: FontWeight.w700,
             fontSize: 20,
           ),
@@ -51,7 +51,7 @@ class OnboardingItem extends StatelessWidget {
           right: 24,
           child: AppText(
             title: model.body,
-            color: AppColors.gray,
+            color: AppColors.grey,
             fontSize: 16,
             fontWeight: FontWeight.w300,
             textAlign: TextAlign.center,
@@ -79,7 +79,7 @@ class OnboardingItem extends StatelessWidget {
           left: 24.height,
           child: InkWell(
             onTap: () {
-              if (currentIndex == boarding.length - 1) {
+              if (currentIndex == BoardingModel.boarding.length - 1) {
                 RouteUtils.navigateTo(const WelcomeViewScreen());
               } else {
                 boardController.nextPage(
@@ -112,7 +112,7 @@ class OnboardingItem extends StatelessWidget {
               },
               child: AppText(
                 title: "skip_intro".tr(),
-                color: AppColors.gray,
+                color: AppColors.grey,
                 fontSize: 16,
                 fontWeight: FontWeight.w300,
               ),

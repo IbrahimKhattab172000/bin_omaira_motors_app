@@ -37,7 +37,7 @@ class AppButton extends StatelessWidget {
 
   factory AppButton.outline({
     required String title,
-    Color borderColor = AppColors.border,
+    Color borderColor = AppColors.grey,
     Color titleColor = AppColors.black,
     VoidCallback? onTap,
     bool isLoading = false,
@@ -79,7 +79,7 @@ class AppButton extends StatelessWidget {
                 ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(_radius),
-                  color: onTap == null ? AppColors.lightGray : color,
+                  color: onTap == null ? AppColors.grey : color,
                   gradient: linearColor
                       ? LinearGradient(
                           begin: Alignment.topCenter,

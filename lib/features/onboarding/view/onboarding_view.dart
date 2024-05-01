@@ -26,12 +26,12 @@ class _OnBoardingViewState extends State<OnBoardingView> {
         physics: const AlwaysScrollableScrollPhysics(),
         controller: boardController,
         itemBuilder: ((context, index) => OnboardingItem(
-              model: boarding[index],
+              model: BoardingModel.boarding[index],
               boardController: boardController,
-              totalScreens: boarding.length,
+              totalScreens: BoardingModel.boarding.length,
               currentIndex: currentIndex,
             )),
-        itemCount: boarding.length,
+        itemCount: BoardingModel.boarding.length,
         onPageChanged: (index) {
           setState(() {
             currentIndex = index;

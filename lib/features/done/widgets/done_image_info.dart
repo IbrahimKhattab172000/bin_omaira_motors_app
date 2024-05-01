@@ -41,7 +41,7 @@ class DoneImageWithInfo extends StatelessWidget {
         AppText(
           title: subtitle.tr(),
           textAlign: TextAlign.center,
-          color: AppColors.gray,
+          color: AppColors.grey,
           fontWeight: FontWeight.w300,
           fontSize: 16,
         ),

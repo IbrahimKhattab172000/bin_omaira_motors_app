@@ -94,7 +94,7 @@ class DropDownSelectionContent extends StatelessWidget {
         // border: Border.all(
         //   color: AppColors.black,
         // ),
-        color: AppColors.lightGray.withOpacity(0.2),
+        color: AppColors.grey.withOpacity(0.2),
         borderRadius: BorderRadius.circular(10),
       ),
       child: BlocBuilder<DropDownSelectionCubit, DropDownSelectionState>(

@@ -32,9 +32,8 @@ class ExpandDownItem extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: state.isSelected
-                        ? AppColors.primary
-                        : AppColors.lightGray,
+                    color:
+                        state.isSelected ? AppColors.primary : AppColors.grey,
                     width: 2,
                   ),
                   borderRadius: BorderRadius.circular(8),
@@ -72,7 +71,7 @@ class ExpandDownItem extends StatelessWidget {
                           contentPadding: EdgeInsets.zero,
                           title: AppText(
                             title: answer,
-                            color: AppColors.gray,
+                            color: AppColors.grey,
                             fontSize: 16,
                           ),
                         ),

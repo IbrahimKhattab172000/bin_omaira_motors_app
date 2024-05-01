@@ -50,14 +50,14 @@ class _SignupTermsAndConditionsState extends State<SignupTermsAndConditions> {
           SizedBox(width: 14.width),
           AppText(
             title: "i_agree".tr(),
-            color: AppColors.gray,
+            color: AppColors.grey,
             fontSize: 14,
             fontWeight: FontWeight.w300,
           ),
           SizedBox(width: 4.width),
           AppText(
             title: "terms_and_conditions".tr(),
-            color: AppColors.gray,
+            color: AppColors.grey,
             fontSize: 14,
             fontWeight: FontWeight.w300,
             decoration: TextDecoration.underline,

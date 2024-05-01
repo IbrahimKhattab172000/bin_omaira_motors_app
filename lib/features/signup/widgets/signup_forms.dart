@@ -26,7 +26,7 @@ class _SignupFormsState extends State<SignupForms> {
           hint: 'name'.tr(),
           trailing: const Icon(
             Icons.person,
-            color: AppColors.lightGray,
+            color: AppColors.grey,
           ),
         ),
         SizedBox(height: 24.height),
@@ -35,7 +35,7 @@ class _SignupFormsState extends State<SignupForms> {
           hint: 'email'.tr(),
           trailing: const Icon(
             Icons.email,
-            color: AppColors.lightGray,
+            color: AppColors.grey,
           ),
         ),
         SizedBox(height: 24.height),
@@ -51,7 +51,7 @@ class _SignupFormsState extends State<SignupForms> {
             padding: const EdgeInsets.all(16),
             child: Image.asset(
               Utils.getAssetPNGPath("phone"),
-              color: AppColors.lightGray,
+              color: AppColors.grey,
             ),
           ),
         ),
@@ -70,7 +70,7 @@ class _SignupFormsState extends State<SignupForms> {
               isPasswordSecure
                   ? Icons.remove_red_eye
                   : Icons.remove_red_eye_outlined,
-              color: AppColors.lightGray,
+              color: AppColors.grey,
             ),
           ),
         ),
@@ -89,7 +89,7 @@ class _SignupFormsState extends State<SignupForms> {
               isConfirmPasswordSecure
                   ? Icons.remove_red_eye
                   : Icons.remove_red_eye_outlined,
-              color: AppColors.lightGray,
+              color: AppColors.grey,
             ),
           ),
         ),

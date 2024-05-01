@@ -32,7 +32,7 @@ class _SigninFormsState extends State<SigninForms> {
             padding: const EdgeInsets.all(16),
             child: Image.asset(
               Utils.getAssetPNGPath("phone"),
-              color: AppColors.lightGray,
+              color: AppColors.grey,
             ),
           ),
         ),
@@ -51,7 +51,7 @@ class _SigninFormsState extends State<SigninForms> {
               isPasswordSecure
                   ? Icons.remove_red_eye
                   : Icons.remove_red_eye_outlined,
-              color: AppColors.lightGray,
+              color: AppColors.grey,
             ),
           ),
         ),

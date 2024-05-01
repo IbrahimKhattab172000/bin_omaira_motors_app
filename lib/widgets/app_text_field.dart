@@ -25,6 +25,8 @@ class AppTextField extends StatefulWidget {
     this.hintColor,
     this.transperent,
     this.inputDecorationLable,
+    this.textColor,
+    this.cursorColor,
   });
 
   final String? hint;
@@ -45,6 +47,8 @@ class AppTextField extends StatefulWidget {
   final Color? hintColor;
   final bool? transperent;
   final String? inputDecorationLable;
+  final Color? textColor;
+  final Color? cursorColor;
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -78,11 +82,11 @@ class _AppTextFieldState extends State<AppTextField> {
           child: AbsorbPointer(
             absorbing: widget.onTap != null,
             child: TextFormField(
-              style: const TextStyle(
-                color: AppColors.white,
+              style: TextStyle(
+                color: widget.textColor ?? AppColors.white,
               ),
               controller: widget.controller,
-              cursorColor: AppColors.white,
+              cursorColor: widget.cursorColor ?? AppColors.white,
               // cursorHeight: double.infinity,
               validator: widget.validator,
               onChanged: widget.onChanged,
@@ -93,12 +97,12 @@ class _AppTextFieldState extends State<AppTextField> {
               obscureText: widget.secure,
               decoration: InputDecoration(
                 labelText: widget.inputDecorationLable ?? "",
-                labelStyle: const TextStyle(color: AppColors.gray),
+                labelStyle: const TextStyle(color: AppColors.grey),
                 hintText: widget.hint ?? '',
                 fillColor: widget.fillColor,
                 filled: true,
                 hintStyle: TextStyle(
-                  color: widget.hintColor ?? AppColors.gray,
+                  color: widget.hintColor ?? AppColors.grey,
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                 ),
@@ -121,7 +125,7 @@ class _AppTextFieldState extends State<AppTextField> {
                 focusedBorder: _border(
                   (widget.transperent ?? false)
                       ? Colors.transparent
-                      : AppColors.white,
+                      : AppColors.darkGray,
                   width: 1,
                 ),
                 errorBorder: _border((widget.transperent ?? false)
@@ -130,8 +134,8 @@ class _AppTextFieldState extends State<AppTextField> {
                 focusedErrorBorder: _border(
                   (widget.transperent ?? false)
                       ? Colors.transparent
-                      : AppColors.white,
-                  width: 1,
+                      : AppColors.grey,
+                  width: 11,
                 ),
               ),
             ),

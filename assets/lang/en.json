@@ -1,5 +1,4 @@
 {
-    
     "welcome_subtitle" : "Signing up takes only 1 min",
     "skip_intro": "Skip intro",
     "create_new_account" : "Create New Account",
@@ -33,6 +32,14 @@
     "terms_and_conditions" : "terms & conditions",
     "successfully_registered" : "Successfully Registered",
     "successfully_registered_subtitle" : "Your account has been registered succesfully, now let’s enjoy Car features!",
+     "hello" : "Hello",
+     "lets_find_you_an_awesome_vehicle" : "Let's find you an awesome vehicle",
+     "what_you_looking_for"  :" What you looking for?",
+     "read_more" : "Read more",
+      "see_all" : "see all",
+      "recommendations" : "Recommendations",
+      "before" : "Before",
+       "sar" : "SAR",
 
     "wnes": "Wanes",
     "your_kid_safe_always" : "Your Kid Safe Always!",

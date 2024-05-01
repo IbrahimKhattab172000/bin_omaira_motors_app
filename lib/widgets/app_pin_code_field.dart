@@ -69,7 +69,7 @@ class AppPinCodeField extends StatelessWidget {
               borderRadius: BorderRadius.circular(18),
               color: AppColors.black,
               border: Border.all(
-                color: AppColors.gray,
+                color: AppColors.grey,
                 width: 1,
               ),
             ),

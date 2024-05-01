@@ -1,4 +1,4 @@
-import 'package:bin_omaira_motors/features/onboarding/view/view.dart';
+import 'package:bin_omaira_motors/features/onboarding/view/onboarding_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
 import 'package:bin_omaira_motors/helpers/images.dart';
@@ -190,7 +190,7 @@ class _AnimatedTextState extends State<AnimatedText> {
                     TextSpan(
                       text: "to your next awesome vehicle",
                       style: TextStyle(
-                        color: AppColors.gray,
+                        color: AppColors.grey,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -204,14 +204,14 @@ class _AnimatedTextState extends State<AnimatedText> {
                 children: [
                   const AppText(
                     title: "Powered by",
-                    color: AppColors.gray,
+                    color: AppColors.grey,
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
                   ),
                   SizedBox(width: 12.width),
                   const AppText(
                     title: "Kian Al-Rqmiah",
-                    color: AppColors.gray,
+                    color: AppColors.grey,
                     fontWeight: FontWeight.w700,
                     fontSize: 12,
                   ),

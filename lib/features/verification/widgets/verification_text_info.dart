@@ -23,7 +23,7 @@ class VerificationTextInfo extends StatelessWidget {
           textAlign: TextAlign.start,
           text: TextSpan(
             style: const TextStyle(
-              color: AppColors.gray,
+              color: AppColors.grey,
               fontSize: 16,
               fontWeight: FontWeight.w300,
             ),

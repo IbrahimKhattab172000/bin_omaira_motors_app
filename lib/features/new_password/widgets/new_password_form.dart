@@ -35,7 +35,7 @@ class _NewPasswordFormsState extends State<NewPasswordForms> {
               isPasswordSecure
                   ? Icons.remove_red_eye
                   : Icons.remove_red_eye_outlined,
-              color: AppColors.lightGray,
+              color: AppColors.grey,
             ),
           ),
         ),
@@ -54,7 +54,7 @@ class _NewPasswordFormsState extends State<NewPasswordForms> {
               isConfirmPasswordSecure
                   ? Icons.remove_red_eye
                   : Icons.remove_red_eye_outlined,
-              color: AppColors.lightGray,
+              color: AppColors.grey,
             ),
           ),
         ),

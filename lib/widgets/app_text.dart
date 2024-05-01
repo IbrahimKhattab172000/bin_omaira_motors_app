@@ -19,7 +19,7 @@ class AppText extends StatelessWidget {
   const AppText({
     super.key,
     required this.title,
-    this.color = AppColors.gray,
+    this.color = AppColors.grey,
     this.fontSize = 16,
     this.textAlign,
     this.decoration,

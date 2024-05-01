@@ -12,17 +12,21 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.actions,
     this.leading,
     this.elevation,
+    this.backgroundColor,
+    this.appbarHeight,
   }) : super(key: key);
   final double hMargin;
   final String? title;
   final List<Widget>? actions;
   final Widget? leading;
   double? elevation;
+  Color? backgroundColor;
+  double? appbarHeight;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: AppColors.black,
+      backgroundColor: backgroundColor ?? AppColors.black,
       elevation: elevation ?? 1,
       iconTheme: const IconThemeData(
         color: AppColors.black,
@@ -42,5 +46,6 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => AppBar().preferredSize;
+  Size get preferredSize =>
+      Size.fromHeight(appbarHeight ?? AppBar().preferredSize.height);
 }

@@ -17,6 +17,7 @@ class AppCountryPicker extends StatelessWidget {
     return CountryCodePicker(
       initialSelection: 'SA',
       hideMainText: true,
+      alignLeft: true,
       onChanged: (value) => onSelect(value.code!, value.dialCode!),
       flagDecoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
@@ -24,12 +25,14 @@ class AppCountryPicker extends StatelessWidget {
       boxDecoration: const BoxDecoration(
         color: AppColors.black,
       ),
+      // showCountryOnly: true,
+
       dialogSize: Size(double.infinity, MediaQuery.of(context).size.height / 2),
       hideSearch: true,
       flagWidth: 40,
       padding: EdgeInsets.zero,
       barrierColor: AppColors.background.withOpacity(0.8),
-      dialogTextStyle: const TextStyle(color: AppColors.gray),
+      dialogTextStyle: const TextStyle(color: AppColors.grey),
     );
   }
 }

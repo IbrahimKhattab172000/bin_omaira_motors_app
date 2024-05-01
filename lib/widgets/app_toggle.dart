@@ -32,7 +32,7 @@ class AppToggleCard extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: AppColors.background,
                 border: Border.all(
-                  color: isSelected ? AppColors.primary : AppColors.lightGray,
+                  color: isSelected ? AppColors.primary : AppColors.grey,
                   width: isSelected ? 5 : 1,
                 ),
               ),
@@ -40,7 +40,7 @@ class AppToggleCard extends StatelessWidget {
             SizedBox(width: 10.width),
             AppText(
               title: title,
-              color: isSelected ? AppColors.primary : AppColors.lightGray,
+              color: isSelected ? AppColors.primary : AppColors.grey,
               fontSize: 14,
               fontWeight: FontWeight.w500,
             ),
@@ -48,7 +48,7 @@ class AppToggleCard extends StatelessWidget {
             price != null
                 ? AppText(
                     title: price ?? "",
-                    color: AppColors.lightGray,
+                    color: AppColors.grey,
                     fontSize: 14,
                     fontWeight: FontWeight.w700,
                   )

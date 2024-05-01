@@ -25,7 +25,7 @@ class ForgotPasswordForm extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Image.asset(
           Utils.getAssetPNGPath("phone"),
-          color: AppColors.lightGray,
+          color: AppColors.grey,
         ),
       ),
     );
