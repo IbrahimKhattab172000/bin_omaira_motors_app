@@ -16,4 +16,5 @@ class Routes {
   static const SUCCESSREGISTER = "SUCCESSREGISTER";
   static const HOME = "HOME";
   static const NOTIFICATIONS = "NOTIFICATIONS";
+  static const SEARCH = "SEARCH";
 }

@@ -15,6 +15,8 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.backgroundColor,
     this.appbarHeight,
     this.titleColor,
+    this.customWidget,
+    this.hasLeading,
   }) : super(key: key);
   final double hMargin;
   final String? title;
@@ -24,6 +26,8 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
   Color? backgroundColor;
   double? appbarHeight;
   final Color? titleColor;
+  final Widget? customWidget;
+  final bool? hasLeading;
 
   @override
   Widget build(BuildContext context) {
@@ -33,16 +37,18 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
       iconTheme: const IconThemeData(
         color: AppColors.black,
       ),
-      leading: leading ?? const SizedBox(),
+      leading: leading,
+      automaticallyImplyLeading: hasLeading ?? false,
       centerTitle: true,
 
       // titleSpacing: title == null || title!.isEmpty || !Navigator.canPop(context) ? null : -16,
-      title: AppText(
-        title: title ?? '',
-        fontSize: 18,
-        color: titleColor ?? AppColors.black,
-        fontWeight: FontWeight.w400,
-      ),
+      title: customWidget ??
+          AppText(
+            title: title ?? '',
+            fontSize: 18,
+            color: titleColor ?? AppColors.black,
+            fontWeight: FontWeight.w400,
+          ),
       actions: actions,
     );
   }

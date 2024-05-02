@@ -1,4 +1,5 @@
 import 'package:bin_omaira_motors/features/home/view/home_view.dart';
+import 'package:bin_omaira_motors/features/search/view/search_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
@@ -37,7 +38,7 @@ class _MainPageState extends State<MainPage> {
         // PostsListBloc.instance.selectedTap = 0;
         // PostsListBloc.instance.clearFilters();
         // PostsListBloc.instance.add(Get());
-        return const HomeView();
+        return const SearchView();
       case 2:
         // MyClassesBloc.instance.clearFilters();
         // MyClassesBloc.instance.add(Get());

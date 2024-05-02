@@ -95,8 +95,9 @@ class _AppTextFieldState extends State<AppTextField> {
               maxLines: widget.maxLines,
               onSaved: widget.onSaved,
               obscureText: widget.secure,
+
               decoration: InputDecoration(
-                labelText: widget.inputDecorationLable ?? "",
+                labelText: widget.inputDecorationLable,
                 labelStyle: const TextStyle(color: AppColors.grey),
                 hintText: widget.hint ?? '',
                 fillColor: widget.fillColor,
@@ -125,7 +126,7 @@ class _AppTextFieldState extends State<AppTextField> {
                 focusedBorder: _border(
                   (widget.transperent ?? false)
                       ? Colors.transparent
-                      : AppColors.darkGray,
+                      : AppColors.lightBlack,
                   width: 1,
                 ),
                 errorBorder: _border((widget.transperent ?? false)
@@ -134,7 +135,7 @@ class _AppTextFieldState extends State<AppTextField> {
                 focusedErrorBorder: _border(
                   (widget.transperent ?? false)
                       ? Colors.transparent
-                      : AppColors.grey,
+                      : AppColors.lightBlack,
                   width: 11,
                 ),
               ),

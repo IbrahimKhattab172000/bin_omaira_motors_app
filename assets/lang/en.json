@@ -43,6 +43,7 @@
      "more" : "More",
      "orders" : "Orders",
      "notifications" :"Notifications",
+     "search" : "Search",
 
 
 
@@ -86,7 +87,6 @@
     "minced" : "Minced",
     "kofta" : "Kofta",
     "arrange_by" : "Arrange By",
-    "search" : "Search",
     "search_for_your_products_here" : "Search for your products here",
     "product_details" : "Product Details",
     "type" : "Type",
