@@ -1,9 +1,17 @@
 import 'package:bin_omaira_motors/features/search_filter/widgets/search_filter_car_type_card.dart';
-import 'package:bin_omaira_motors/helpers/dimentions.dart';
 import 'package:flutter/material.dart';
+import 'package:bin_omaira_motors/helpers/dimentions.dart';
 
-class SearchFilterCarTypeList extends StatelessWidget {
-  const SearchFilterCarTypeList({super.key});
+class SearchFilterCarTypeList extends StatefulWidget {
+  const SearchFilterCarTypeList({Key? key}) : super(key: key);
+
+  @override
+  _SearchFilterCarTypeListState createState() =>
+      _SearchFilterCarTypeListState();
+}
+
+class _SearchFilterCarTypeListState extends State<SearchFilterCarTypeList> {
+  int selectedIndex = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +22,14 @@ class SearchFilterCarTypeList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) {
-          return const SearchFilterCarTypeCard();
+          return SearchFilterCarTypeCard(
+            isSelected: index == selectedIndex,
+            onTap: () {
+              setState(() {
+                selectedIndex = index;
+              });
+            },
+          );
         },
         itemCount: 4,
         separatorBuilder: (context, index) {

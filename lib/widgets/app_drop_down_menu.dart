@@ -91,11 +91,11 @@ class DropDownSelectionContent extends StatelessWidget {
         horizontal: 16,
       ),
       decoration: BoxDecoration(
-        // border: Border.all(
-        //   color: AppColors.black,
-        // ),
-        color: AppColors.grey.withOpacity(0.2),
-        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: AppColors.grey.withOpacity(0.3),
+        ),
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(12),
       ),
       child: BlocBuilder<DropDownSelectionCubit, DropDownSelectionState>(
         builder: (context, state) {
@@ -137,8 +137,9 @@ class DropDownSelectionContent extends StatelessWidget {
                 Expanded(
                   child: Scrollbar(
                     child: ListView(
-                        physics: const BouncingScrollPhysics(),
-                        children: childs),
+                      physics: const BouncingScrollPhysics(),
+                      children: childs,
+                    ),
                   ),
                 ),
               ],
@@ -191,7 +192,7 @@ class SelectionRow extends StatelessWidget {
             },
             child: AppText(
               title: hint,
-              color: AppColors.black,
+              color: AppColors.grey,
             ),
           ),
 
@@ -222,6 +223,7 @@ class SelectionRow extends StatelessWidget {
           child: Icon(
             open ? FeatherIcons.chevronUp : FeatherIcons.chevronDown,
             size: 30,
+            color: AppColors.grey,
           ),
         ),
       ],
@@ -276,7 +278,7 @@ class DropDownListTile extends StatelessWidget {
           // Set orange border if item is selected
           border: selected
               ? Border.all(
-                  color: AppColors.primary,
+                  color: AppColors.grey,
                   width: 1,
                 )
               : null,
@@ -321,7 +323,7 @@ class SelectionChip extends StatelessWidget {
           children: [
             AppText(
               title: item.label,
-              color: AppColors.black,
+              color: AppColors.darkGray,
               fontSize: 14,
               fontWeight: FontWeight.w700,
             ),
