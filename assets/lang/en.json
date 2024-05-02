@@ -44,7 +44,13 @@
      "orders" : "Orders",
      "notifications" :"Notifications",
      "search" : "Search",
-
+     "search_filter"  :"Search Filter",
+     "car_type" : "Car type",
+     "model" :"Model",
+     "year" :"Year",
+     "color" : "Color",
+     "confirm_filters" : "Confirm filters",
+     "clear_filters" : "Clear filters",
 
 
     "wnes": "Wanes",

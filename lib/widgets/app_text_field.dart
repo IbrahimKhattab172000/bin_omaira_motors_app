@@ -126,7 +126,7 @@ class _AppTextFieldState extends State<AppTextField> {
                 focusedBorder: _border(
                   (widget.transperent ?? false)
                       ? Colors.transparent
-                      : AppColors.lightBlack,
+                      : AppColors.grey,
                   width: 1,
                 ),
                 errorBorder: _border((widget.transperent ?? false)
@@ -135,7 +135,7 @@ class _AppTextFieldState extends State<AppTextField> {
                 focusedErrorBorder: _border(
                   (widget.transperent ?? false)
                       ? Colors.transparent
-                      : AppColors.lightBlack,
+                      : AppColors.grey,
                   width: 11,
                 ),
               ),

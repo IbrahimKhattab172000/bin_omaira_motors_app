@@ -17,4 +17,5 @@ class Routes {
   static const HOME = "HOME";
   static const NOTIFICATIONS = "NOTIFICATIONS";
   static const SEARCH = "SEARCH";
+  static const SEARCHFILTER = "SEARCHFILTER";
 }

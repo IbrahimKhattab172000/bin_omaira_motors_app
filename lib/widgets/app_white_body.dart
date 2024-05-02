@@ -1,9 +1,9 @@
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:flutter/material.dart';
 
-class SearchWhiteBody extends StatelessWidget {
+class AppWhiteBody extends StatelessWidget {
   final Widget child;
-  const SearchWhiteBody({
+  const AppWhiteBody({
     super.key,
     required this.child,
   });

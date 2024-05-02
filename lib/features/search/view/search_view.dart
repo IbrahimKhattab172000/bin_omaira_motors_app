@@ -1,7 +1,7 @@
 import 'package:bin_omaira_motors/features/search/widgets/search_app_bar.dart';
 import 'package:bin_omaira_motors/features/search/widgets/search_recommendation_list.dart';
 import 'package:bin_omaira_motors/features/search/widgets/search_recommendation_text.dart';
-import 'package:bin_omaira_motors/features/search/widgets/search_white_body.dart';
+import 'package:bin_omaira_motors/widgets/app_white_body.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,7 @@ class SearchView extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.black,
       appBar: const SearchAppBar(),
-      body: SearchWhiteBody(
+      body: AppWhiteBody(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

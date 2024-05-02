@@ -1,5 +1,7 @@
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_appbar.dart';
 import 'package:bin_omaira_motors/widgets/app_text_field.dart';
@@ -33,17 +35,22 @@ class SearchAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
           ),
           SizedBox(width: 16.width),
-          Container(
-            padding: const EdgeInsets.all(16),
-            width: 54.width,
-            decoration: BoxDecoration(
-              border: Border.all(color: AppColors.darkGray, width: 1),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Image.asset(
-              Utils.getAssetPNGPath("settings"),
-              height: 16,
-              color: AppColors.grey,
+          InkWell(
+            onTap: () {
+              CustomNavigator.push(Routes.SEARCHFILTER);
+            },
+            child: Container(
+              padding: const EdgeInsets.all(16),
+              width: 54.width,
+              decoration: BoxDecoration(
+                border: Border.all(color: AppColors.darkGray, width: 1),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Image.asset(
+                Utils.getAssetPNGPath("settings"),
+                height: 16,
+                color: AppColors.grey,
+              ),
             ),
           ),
         ],

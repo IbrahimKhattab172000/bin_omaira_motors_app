@@ -5,6 +5,7 @@ import 'package:bin_omaira_motors/features/new_password/view/new_password_view.d
 import 'package:bin_omaira_motors/features/notifications/view/notifications_view.dart';
 import 'package:bin_omaira_motors/features/onboarding/view/onboarding_view.dart';
 import 'package:bin_omaira_motors/features/search/view/search_view.dart';
+import 'package:bin_omaira_motors/features/search_filter/view/search_filter_view.dart';
 import 'package:bin_omaira_motors/features/signin/view/signin_view.dart';
 import 'package:bin_omaira_motors/features/signup/view/signup_view.dart';
 import 'package:bin_omaira_motors/features/splash/view/pre_splash_view.dart';
@@ -100,6 +101,9 @@ abstract class CustomNavigator {
 
       case Routes.SEARCH:
         return pageRoute(const SearchView());
+
+      case Routes.SEARCHFILTER:
+        return pageRoute(const SearchFilterView());
 
 //?Good example
       // case Routes.UPDATE_BRANCH:
