@@ -36,10 +36,14 @@
      "lets_find_you_an_awesome_vehicle" : "Let's find you an awesome vehicle",
      "what_you_looking_for"  :" What you looking for?",
      "read_more" : "Read more",
-      "see_all" : "see all",
-      "recommendations" : "Recommendations",
-      "before" : "Before",
-       "sar" : "SAR",
+     "see_all" : "see all",
+     "recommendations" : "Recommendations",
+     "before" : "Before",
+     "sar" : "SAR",
+     "more" : "More",
+     "orders" : "Orders",
+
+
 
     "wnes": "Wanes",
     "your_kid_safe_always" : "Your Kid Safe Always!",
@@ -57,8 +61,6 @@
     "email_or_phone" : "Email / Phone Number",
     "browse_without_logging_in" : "Browse Without Logging In",
     "new_signing" : "New Signing",
-   
-   
     "forgot_password" : "Forgot Password",
     "forgot_password_note"  : "Please enter your phone number to receive a 4-digit code to reset your password",
     "send_code" : "Send Code",
@@ -101,7 +103,6 @@
     "delete_cart"  : "Delete Cart",
     "add_discount_coupon" : "Add Discount Coupon",
     "activate" : "Activate",
-    "cart" : "Cart",
     "enter_the_discount_code" :"Enter the discount code",
     "order_summary" : "Order Summary",
     "secondary_sum"  :"Subtotal",

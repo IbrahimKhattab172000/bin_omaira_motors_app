@@ -1,7 +1,7 @@
 import 'package:bin_omaira_motors/features/splash/view/pre_splash_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
 import 'package:bin_omaira_motors/helpers/pop_scaffold.dart';
-import 'package:bin_omaira_motors/helpers/routes.dart';
 import 'package:bin_omaira_motors/network/network_layer.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -46,8 +46,8 @@ class _MyAppState extends State<MyApp> {
               focusColor: Colors.transparent,
               primaryColor: AppColors.primary,
             ),
-            onGenerateRoute: onGenerateRoute,
-            navigatorKey: navigatorKey,
+            onGenerateRoute: CustomNavigator.onCreateRoute,
+            navigatorKey: CustomNavigator.navigatorState,
             home: child,
             localizationsDelegates: context.localizationDelegates,
             supportedLocales: const [

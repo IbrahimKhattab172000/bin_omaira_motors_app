@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
-import 'package:bin_omaira_motors/helpers/routes.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +26,7 @@ class Utils {
   }
 
   static double get bottomDevicePadding {
-    final bottom = MediaQuery.of(RouteUtils.context).padding.bottom;
+    final bottom = MediaQuery.of(CustomNavigator.context).padding.bottom;
     if (bottom < 34) {
       return 34.height;
     }
@@ -34,7 +34,7 @@ class Utils {
   }
 
   static double get topDevicePadding {
-    final top = MediaQuery.of(RouteUtils.context).padding.top;
+    final top = MediaQuery.of(CustomNavigator.context).padding.top;
     if (top < 44) {
       return 44.height;
     }
@@ -46,7 +46,8 @@ class Utils {
   }
 
   static double get keyboardHeight {
-    final keyboardHeight = MediaQuery.of(RouteUtils.context).viewInsets.bottom;
+    final keyboardHeight =
+        MediaQuery.of(CustomNavigator.context).viewInsets.bottom;
     if (keyboardHeight == 0) {
       return keyboardHeight;
     }
@@ -54,7 +55,7 @@ class Utils {
   }
 
   static bool get isAR {
-    return RouteUtils.context.locale.languageCode == 'ar';
+    return CustomNavigator.context.locale.languageCode == 'ar';
   }
 
   static void dismissKeyboard() {
@@ -93,7 +94,7 @@ class Utils {
   }
 
   static ThemeData get datePickerTheme {
-    return Theme.of(RouteUtils.context).copyWith(
+    return Theme.of(CustomNavigator.context).copyWith(
       colorScheme: const ColorScheme.light(
         primary: AppColors.primary,
         onPrimary: AppColors.secondary,

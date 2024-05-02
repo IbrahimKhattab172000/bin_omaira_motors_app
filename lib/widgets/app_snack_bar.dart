@@ -1,5 +1,5 @@
 import 'package:bin_omaira_motors/helpers/colors.dart';
-import 'package:bin_omaira_motors/helpers/routes.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
 import 'package:flutter/material.dart';
 
 import 'app_text.dart';
@@ -14,8 +14,8 @@ void showSnackBar(
   if (message.trim().isEmpty) {
     return;
   }
-  ScaffoldMessenger.of(RouteUtils.context).hideCurrentSnackBar();
-  ScaffoldMessenger.of(RouteUtils.context).showSnackBar(
+  ScaffoldMessenger.of(CustomNavigator.context).hideCurrentSnackBar();
+  ScaffoldMessenger.of(CustomNavigator.context).showSnackBar(
     SnackBar(
       backgroundColor: errorMessage ? AppColors.red : color,
       behavior: SnackBarBehavior.floating,

@@ -1,5 +1,5 @@
 import 'package:bin_omaira_motors/helpers/colors.dart';
-import 'package:bin_omaira_motors/helpers/routes.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
 import 'package:bin_omaira_motors/widgets/app_appbar.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +15,8 @@ class NewPasswordAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppAppBar(
       leading: IconButton(
         onPressed: () {
-          RouteUtils.pop();
+          // RouteUtils.pop();
+          CustomNavigator.pop();
         },
         icon: const Icon(
           Icons.arrow_back_ios,

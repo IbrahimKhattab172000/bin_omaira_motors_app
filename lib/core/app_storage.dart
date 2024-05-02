@@ -1,7 +1,5 @@
 import 'dart:developer';
 
-import 'package:bin_omaira_motors/features/splash/view/splash_view.dart';
-import 'package:bin_omaira_motors/helpers/routes.dart';
 import 'package:get_storage/get_storage.dart';
 
 class AppStorage {
@@ -68,6 +66,6 @@ class AppStorage {
     await _box.erase();
     log("user isLogged :: $isLogged");
     // CustomNavigator.push(Routes.SPLASH, clean: true);
-    RouteUtils.navigateAndReplace(const SplashView());
+    // RouteUtils.navigateAndReplace(const SplashView());
   }
 }

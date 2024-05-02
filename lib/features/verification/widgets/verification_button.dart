@@ -1,5 +1,5 @@
-import 'package:bin_omaira_motors/features/new_password/view/new_password_view.dart';
-import 'package:bin_omaira_motors/helpers/routes.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:bin_omaira_motors/widgets/app_button.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,8 @@ class VerificationButton extends StatelessWidget {
     return AppButton(
       title: "confirm".tr(),
       onTap: () {
-        RouteUtils.navigateTo(const NewPasswordView());
+        // RouteUtils.navigateTo(const NewPasswordView());
+        CustomNavigator.push(Routes.NEWPASSWORD);
       },
       titleFontSize: 14,
     );

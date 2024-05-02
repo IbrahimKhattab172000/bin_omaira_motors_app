@@ -1,4 +1,6 @@
 import 'package:bin_omaira_motors/helpers/colors.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_text.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -14,6 +16,7 @@ class OnboardingSkipButton extends StatelessWidget {
     return InkWell(
       onTap: () {
         // RouteUtils.navigateTo(const LoginView());
+        CustomNavigator.push(Routes.SIGNIN);
       },
       child: Padding(
         padding: EdgeInsets.only(top: Utils.topDevicePadding + 10),

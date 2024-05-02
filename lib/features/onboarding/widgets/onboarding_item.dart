@@ -1,5 +1,5 @@
-import 'package:bin_omaira_motors/features/welcome/view/welcome_view.dart';
-import 'package:bin_omaira_motors/helpers/routes.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:bin_omaira_motors/features/onboarding/models/boarding.dart';
@@ -80,7 +80,8 @@ class OnboardingItem extends StatelessWidget {
           child: InkWell(
             onTap: () {
               if (currentIndex == BoardingModel.boarding.length - 1) {
-                RouteUtils.navigateTo(const WelcomeViewScreen());
+                // RouteUtils.navigateTo(const WelcomeViewScreen());
+                CustomNavigator.push(Routes.WELCOME);
               } else {
                 boardController.nextPage(
                   duration: const Duration(milliseconds: 750),
@@ -108,7 +109,8 @@ class OnboardingItem extends StatelessWidget {
             right: 24.height,
             child: InkWell(
               onTap: () {
-                RouteUtils.navigateTo(const WelcomeViewScreen());
+                // RouteUtils.navigateTo(const WelcomeViewScreen());
+                CustomNavigator.push(Routes.WELCOME);
               },
               child: AppText(
                 title: "skip_intro".tr(),

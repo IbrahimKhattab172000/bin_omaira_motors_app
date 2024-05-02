@@ -1,7 +1,7 @@
-import 'package:bin_omaira_motors/features/splash/view/splash_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/images.dart';
-import 'package:bin_omaira_motors/helpers/routes.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:flutter/material.dart';
 
 class PreSplashView extends StatefulWidget {
@@ -14,11 +14,10 @@ class PreSplashView extends StatefulWidget {
 class _PreSplashViewState extends State<PreSplashView> {
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 1), () {
-      RouteUtils.navigateAndPopAll(const SplashView());
+    Future.delayed(const Duration(seconds: 3), () {
+      // RouteUtils.navigateAndPopAll(const SplashView());
 
-      // RouteUtils.navigateAndPopAll(SecondSplashView());
-
+      CustomNavigator.push(Routes.SPLASH);
       // if (AppStorage.isLogged) {
       //   HomeBloc.of(context).add(Get());
 

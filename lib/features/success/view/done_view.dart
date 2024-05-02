@@ -1,19 +1,19 @@
-import 'package:bin_omaira_motors/features/done/widgets/done_image_info.dart';
-import 'package:bin_omaira_motors/features/done/widgets/done_app_bar.dart';
-import 'package:bin_omaira_motors/features/done/widgets/done_button.dart';
-import 'package:bin_omaira_motors/features/signin/view/signin_view.dart';
+import 'package:bin_omaira_motors/features/success/widgets/success_app_bar.dart';
+import 'package:bin_omaira_motors/features/success/widgets/success_button.dart';
+import 'package:bin_omaira_motors/features/success/widgets/success_image_info.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
-import 'package:bin_omaira_motors/helpers/routes.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:flutter/material.dart';
 
-class DoneView extends StatelessWidget {
+class SuccessView extends StatelessWidget {
   final String imagePath;
   final String title;
   final String subtitle;
   final String buttonTitle;
-  const DoneView({
+  const SuccessView({
     super.key,
     required this.imagePath,
     required this.title,
@@ -25,7 +25,7 @@ class DoneView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.black,
-      appBar: const DoneAppBar(),
+      appBar: const SuccessAppBar(),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Padding(
@@ -34,16 +34,17 @@ class DoneView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(height: 62.height),
-              DoneImageWithInfo(
+              SuccessImageWithInfo(
                 title: title,
                 subtitle: subtitle,
                 imagePath: imagePath,
               ),
               SizedBox(height: 32.height),
-              DoneButton(
+              SuccessButton(
                 buttonTitle: buttonTitle,
                 onTap: () {
-                  RouteUtils.navigateTo(const SigninView());
+                  // RouteUtils.navigateTo(const SigninView());
+                  CustomNavigator.push(Routes.SIGNIN);
                 },
               ),
               SizedBox(height: Utils.bottomDevicePadding),

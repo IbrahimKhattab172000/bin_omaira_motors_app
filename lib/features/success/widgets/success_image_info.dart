@@ -5,12 +5,12 @@ import 'package:bin_omaira_motors/widgets/app_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-class DoneImageWithInfo extends StatelessWidget {
+class SuccessImageWithInfo extends StatelessWidget {
   final String imagePath;
   final String title;
   final String subtitle;
 
-  const DoneImageWithInfo({
+  const SuccessImageWithInfo({
     super.key,
     required this.imagePath,
     required this.title,

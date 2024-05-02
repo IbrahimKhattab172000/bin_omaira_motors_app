@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
-import 'package:bin_omaira_motors/helpers/routes.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
 import 'package:flutter/material.dart';
 
 class AppLoadingIndicator extends StatelessWidget {
@@ -12,11 +12,12 @@ class AppLoadingIndicator extends StatelessWidget {
 
   static Future<void> show() async {
     if (_isVisible) {
-      RouteUtils.pop();
+      // RouteUtils.pop();
+      CustomNavigator.pop();
     }
     _isVisible = true;
     await showDialog(
-      context: RouteUtils.context,
+      context: CustomNavigator.context,
       barrierDismissible: false,
       barrierColor: Colors.black.withOpacity(0.7),
       builder: (context) {
@@ -30,7 +31,7 @@ class AppLoadingIndicator extends StatelessWidget {
     if (!_isVisible) {
       return;
     }
-    RouteUtils.pop();
+    CustomNavigator.pop();
     _isVisible = false;
   }
 

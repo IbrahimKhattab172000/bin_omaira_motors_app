@@ -2,7 +2,7 @@
 
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
-import 'package:bin_omaira_motors/helpers/routes.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_button.dart';
 import 'package:bin_omaira_motors/widgets/app_text.dart';
@@ -36,7 +36,7 @@ class AppDialog extends StatelessWidget {
     VoidCallback? buttonOnTap,
   }) {
     return showDialog(
-      context: RouteUtils.context,
+      context: CustomNavigator.context,
       barrierDismissible: false,
       // barrierColor: AppColors.secondary.withOpacity(0.7),
       builder: (context) {

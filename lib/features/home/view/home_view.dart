@@ -5,6 +5,7 @@ import 'package:bin_omaira_motors/features/home/widgets/home_recommendation_list
 import 'package:bin_omaira_motors/features/home/widgets/home_search_with_filter_bar.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
+import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_appbar.dart';
 import 'package:flutter/material.dart';
 
@@ -34,6 +35,7 @@ class HomeView extends StatelessWidget {
             const HomeRecommendationsBar(),
             SizedBox(height: 24.height),
             const HomeRecommendationList(),
+            SizedBox(height: Utils.bottomDevicePadding),
           ],
         ),
       ),
