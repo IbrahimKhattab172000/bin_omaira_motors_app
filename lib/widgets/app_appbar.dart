@@ -14,6 +14,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.elevation,
     this.backgroundColor,
     this.appbarHeight,
+    this.titleColor,
   }) : super(key: key);
   final double hMargin;
   final String? title;
@@ -22,6 +23,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
   double? elevation;
   Color? backgroundColor;
   double? appbarHeight;
+  final Color? titleColor;
 
   @override
   Widget build(BuildContext context) {
@@ -38,8 +40,8 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: AppText(
         title: title ?? '',
         fontSize: 18,
-        color: AppColors.black,
-        fontWeight: FontWeight.bold,
+        color: titleColor ?? AppColors.black,
+        fontWeight: FontWeight.w400,
       ),
       actions: actions,
     );

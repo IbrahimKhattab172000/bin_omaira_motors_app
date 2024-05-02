@@ -1,5 +1,7 @@
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:bin_omaira_motors/widgets/app_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -37,17 +39,22 @@ class HomeHelloWithNotificationBell extends StatelessWidget {
             ],
           ),
           const Spacer(),
-          Container(
-            height: 54.height,
-            width: 54.width,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              color: AppColors.deepLightPrimary,
-            ),
-            child: const Icon(
-              FontAwesomeIcons.solidBell,
-              color: AppColors.primary,
-              size: 24,
+          InkWell(
+            onTap: () {
+              CustomNavigator.push(Routes.NOTIFICATIONS);
+            },
+            child: Container(
+              height: 54.height,
+              width: 54.width,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: AppColors.deepLightPrimary,
+              ),
+              child: const Icon(
+                FontAwesomeIcons.solidBell,
+                color: AppColors.primary,
+                size: 24,
+              ),
             ),
           ),
         ],

@@ -42,6 +42,7 @@
      "sar" : "SAR",
      "more" : "More",
      "orders" : "Orders",
+     "notifications" :"Notifications",
 
 
 
@@ -137,7 +138,6 @@
     "account_settings" :"Account Settings",
     "favorite" :"Favorites",
     "locations"  :"Locations",
-    "notifications" :"Notifications",
     "language" :"Language",
     "about_us" :"About Us",
     "contact_us" :"Contact Us",
