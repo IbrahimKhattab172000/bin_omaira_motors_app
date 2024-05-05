@@ -53,8 +53,20 @@
      "clear_filters" : "Clear filters",
      "no_vehicles_found" : "No vehicles found",
      "please_try_to_search_another_vehicles" : "Please try to search another vehicles or apply different sorting filters",
-
-
+     "order_id" : "Order id",
+     "car_number" : "Car number",
+     "car_price" : "Car price",
+     "value_added_tax" : "value added tax",
+     "registration_fee" :"Registration fee",
+     "delivery_fee" : "delivery fee",
+     "total_price" : "Total price",
+     "deposit" : "deposit",
+     "amount_remaining" : "Amount remaining",
+     "attatchments" : "Attatchments",
+     "receipt" : "Receipt",
+     "sale_contract" :"Sale contract",
+     "cause_of_order_rejection" : "Cause of order rejection",
+     "lorem" : "Lorem ipsum dolor sit amet, adipiscingse sed do eiusmod tempor incididunt sed..",
 
     "wnes": "Wanes",
     "your_kid_safe_always" : "Your Kid Safe Always!",

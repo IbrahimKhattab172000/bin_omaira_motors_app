@@ -1,4 +1,5 @@
 import 'package:bin_omaira_motors/features/home/view/home_view.dart';
+import 'package:bin_omaira_motors/features/orders/view/orders_view.dart';
 import 'package:bin_omaira_motors/features/search/view/search_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
@@ -133,7 +134,7 @@ Widget body({required int index}) {
     case 2:
       // MyClassesBloc.instance.clearFilters();
       // MyClassesBloc.instance.add(Get());
-      return const HomeView();
+      return const OrdersView();
     case 3:
       // MyClassesBloc.instance.clearFilters();
       // MyClassesBloc.instance.add(Get());
