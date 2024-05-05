@@ -34,11 +34,14 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: backgroundColor ?? AppColors.black,
       elevation: elevation ?? 1,
+
       iconTheme: const IconThemeData(
-        color: AppColors.black,
+        color: AppColors.white,
       ),
       leading: leading,
+
       automaticallyImplyLeading: hasLeading ?? false,
+
       centerTitle: true,
 
       // titleSpacing: title == null || title!.isEmpty || !Navigator.canPop(context) ? null : -16,

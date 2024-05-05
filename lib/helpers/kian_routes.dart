@@ -19,4 +19,5 @@ class Routes {
   static const SEARCH = "SEARCH";
   static const SEARCHFILTER = "SEARCHFILTER";
   static const OREDERS = "OREDERS";
+  static const OREDERDETAILS = "OREDERDETAILS";
 }

@@ -67,6 +67,9 @@
      "sale_contract" :"Sale contract",
      "cause_of_order_rejection" : "Cause of order rejection",
      "lorem" : "Lorem ipsum dolor sit amet, adipiscingse sed do eiusmod tempor incididunt sed..",
+     "order_details"  : "Order Details",
+
+
 
     "wnes": "Wanes",
     "your_kid_safe_always" : "Your Kid Safe Always!",
@@ -173,7 +176,6 @@
     "rejected" : "Rejected",
     "delivered" : "Delivered",
     "new_order" : "New Order",
-    "order_details"  : "Order Details",
     "rate_service" :"Rate Service",
     "re_order" : "Reorder",
     "rejection_reason"  : "Rejection Reason",

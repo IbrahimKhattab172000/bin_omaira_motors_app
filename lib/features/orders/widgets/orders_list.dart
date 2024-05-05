@@ -11,7 +11,7 @@ class OrdersList extends StatelessWidget {
       shrinkWrap: true,
       physics: const BouncingScrollPhysics(),
       itemBuilder: (context, index) {
-        return const OrdersCard();
+        return const OrdersCard(type: "declined");
       },
       itemCount: 4,
       separatorBuilder: (context, index) {
