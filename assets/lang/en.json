@@ -51,6 +51,9 @@
      "color" : "Color",
      "confirm_filters" : "Confirm filters",
      "clear_filters" : "Clear filters",
+     "no_vehicles_found" : "No vehicles found",
+     "please_try_to_search_another_vehicles" : "Please try to search another vehicles or apply different sorting filters",
+
 
 
     "wnes": "Wanes",

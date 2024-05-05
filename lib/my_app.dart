@@ -2,10 +2,12 @@ import 'package:bin_omaira_motors/features/splash/view/pre_splash_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
 import 'package:bin_omaira_motors/helpers/pop_scaffold.dart';
+import 'package:bin_omaira_motors/main_pages/kian_nav/kian_nav_cubit/cubit.dart';
 import 'package:bin_omaira_motors/network/network_layer.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' as services;
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyApp extends StatefulWidget {
@@ -33,28 +35,31 @@ class _MyAppState extends State<MyApp> {
           statusBarIconBrightness: Brightness.light,
         ),
         child: KeyboardPopScaffold(
-          child: MaterialApp(
-            title: 'Bin Omaira Motors',
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-              hoverColor: Colors.transparent,
-              useMaterial3: false,
-              fontFamily: 'Gotham',
-              scaffoldBackgroundColor: AppColors.background,
-              splashColor: Colors.transparent,
-              highlightColor: Colors.transparent,
-              focusColor: Colors.transparent,
-              primaryColor: AppColors.primary,
+          child: BlocProvider(
+            create: (context) => NavBarCubit(),
+            child: MaterialApp(
+              title: 'Bin Omaira Motors',
+              debugShowCheckedModeBanner: false,
+              theme: ThemeData(
+                hoverColor: Colors.transparent,
+                useMaterial3: false,
+                fontFamily: 'Gotham',
+                scaffoldBackgroundColor: AppColors.background,
+                splashColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                primaryColor: AppColors.primary,
+              ),
+              onGenerateRoute: CustomNavigator.onCreateRoute,
+              navigatorKey: CustomNavigator.navigatorState,
+              home: child,
+              localizationsDelegates: context.localizationDelegates,
+              supportedLocales: const [
+                Locale('ar'),
+                Locale('en'),
+              ],
+              locale: context.locale,
             ),
-            onGenerateRoute: CustomNavigator.onCreateRoute,
-            navigatorKey: CustomNavigator.navigatorState,
-            home: child,
-            localizationsDelegates: context.localizationDelegates,
-            supportedLocales: const [
-              Locale('ar'),
-              Locale('en'),
-            ],
-            locale: context.locale,
           ),
         ),
       ),

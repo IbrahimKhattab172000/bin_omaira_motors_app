@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:bin_omaira_motors/global_bloc/drop_down_selection/cubit.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
@@ -7,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
-// ignore: must_be_immutable
 class AppDropDownSelection extends StatelessWidget {
   final List<SelectionItem>? items;
   List<SelectionItem>? initialItems;
@@ -17,6 +18,7 @@ class AppDropDownSelection extends StatelessWidget {
   final bool multiSelection;
   Function(SelectionItem? value)? onChangeSingle;
   SelectionItem? initialItem;
+  bool? hasCircle;
 
   AppDropDownSelection.single({
     Key? key,
@@ -26,6 +28,7 @@ class AppDropDownSelection extends StatelessWidget {
     required this.onChangeSingle,
     required this.height,
     this.multiSelection = false,
+    this.hasCircle = false,
   }) : super(key: key);
 
   AppDropDownSelection.multi({
@@ -60,6 +63,7 @@ class AppDropDownSelection extends StatelessWidget {
         items: items,
         hint: hint,
         height: height,
+        hasCircle: hasCircle,
       ),
     );
   }
@@ -71,13 +75,14 @@ class DropDownSelectionContent extends StatelessWidget {
   final String hint;
   final double height;
   final bool multiSelection;
-
-  const DropDownSelectionContent({
+  bool? hasCircle;
+  DropDownSelectionContent({
     Key? key,
     required this.items,
     required this.hint,
     required this.height,
     required this.multiSelection,
+    this.hasCircle = false,
   }) : super(key: key);
 
   @override
@@ -100,10 +105,30 @@ class DropDownSelectionContent extends StatelessWidget {
       child: BlocBuilder<DropDownSelectionCubit, DropDownSelectionState>(
         builder: (context, state) {
           if (state is DropDownSelectionStateClose) {
-            return SelectionRow.close(
-              multiSelection: multiSelection,
-              selectedItems: state.selectedItems,
-              hint: hint,
+            return Row(
+              children: [
+                if (hasCircle != null && (hasCircle ?? false))
+                  Row(
+                    children: [
+                      Container(
+                        height: 24.height,
+                        width: 24.height,
+                        decoration: BoxDecoration(
+                          color: state.selectedItems.first.value,
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                      SizedBox(width: 10.width),
+                    ],
+                  ),
+                Expanded(
+                  child: SelectionRow.close(
+                    multiSelection: multiSelection,
+                    selectedItems: state.selectedItems,
+                    hint: hint,
+                  ),
+                ),
+              ],
             );
           }
           // Configure item selection

@@ -3,7 +3,6 @@ import 'package:bin_omaira_motors/helpers/dimentions.dart';
 import 'package:bin_omaira_motors/main_models/selection_item.dart';
 import 'package:bin_omaira_motors/widgets/app_drop_down_menu.dart';
 import 'package:bin_omaira_motors/widgets/app_text.dart';
-import 'package:bin_omaira_motors/widgets/app_text_field.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -75,22 +74,21 @@ class SearchFilterForms extends StatelessWidget {
           //   onChangeSingle: (SelectionItem? value) {},
           //   height: MediaQuery.sizeOf(context).height * 0.3,
           // ),
-          AppTextField(
-            fillColor: AppColors.white,
-            borderColor: AppColors.grey,
-            cursorColor: AppColors.grey,
-            textColor: AppColors.lightBlack,
-            label: "color".tr(),
-            leading: Container(
-              height: 24.height,
-              width: 24.height,
-              margin: const EdgeInsets.all(10),
-              decoration: const BoxDecoration(
-                color: AppColors.darkGray,
-                shape: BoxShape.circle,
-              ),
-            ),
+          SizedBox(height: 12.height),
+          AppDropDownSelection.single(
+            hasCircle: true,
+            initialItem:
+                SelectionItem(label: "Space gray", value: AppColors.darkGray),
+            hint: "year".tr(),
+            items: [
+              SelectionItem(label: "Space gray", value: AppColors.darkGray),
+              SelectionItem(label: "Space black", value: AppColors.black),
+              SelectionItem(label: "Space red", value: AppColors.red),
+            ],
+            onChangeSingle: (SelectionItem? value) {},
+            height: MediaQuery.sizeOf(context).height * 0.3,
           ),
+          SizedBox(height: 24.height),
         ],
       ),
     );
