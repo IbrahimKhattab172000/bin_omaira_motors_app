@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 class AppButton extends StatelessWidget {
   const AppButton({
     super.key,
-    required this.title,
+    this.title,
     this.color = AppColors.primary,
     this.titleColor = AppColors.white,
     this.onTap,
@@ -20,9 +20,10 @@ class AppButton extends StatelessWidget {
     this.titleFontSize = 14,
     this.isLoading = false,
     this.linearColor = false,
+    this.customButtonBody,
   });
 
-  final String title;
+  final String? title;
   final Color color;
   final Color titleColor;
   final VoidCallback? onTap;
@@ -32,6 +33,7 @@ class AppButton extends StatelessWidget {
   final double titleFontSize;
   final bool isLoading;
   final bool linearColor;
+  final Widget? customButtonBody;
 
   double get _radius => 12;
 
@@ -71,12 +73,13 @@ class AppButton extends StatelessWidget {
                 height: height ?? 52.height,
                 padding: padding ?? EdgeInsets.symmetric(horizontal: 48.width),
                 alignment: Alignment.center,
-                child: AppText(
-                  title: title,
-                  color: titleColor,
-                  fontSize: titleFontSize,
-                  fontWeight: FontWeight.bold,
-                ),
+                child: customButtonBody ??
+                    AppText(
+                      title: title ?? "no title",
+                      color: titleColor,
+                      fontSize: titleFontSize,
+                      fontWeight: FontWeight.bold,
+                    ),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(_radius),
                   color: onTap == null ? AppColors.grey : color,
@@ -124,24 +127,26 @@ class _OutlineAppButton extends AppButton {
               },
               radius: _radius,
               borderRadius: BorderRadius.circular(_radius),
-              child: Container(
-                height: height ?? 56.height,
-                alignment: Alignment.center,
-                padding: padding ?? EdgeInsets.symmetric(horizontal: 48.width),
-                child: AppText(
-                  title: title,
-                  color: onTap == null ? AppColors.darkGray : titleColor,
-                  fontSize: titleFontSize,
-                  fontWeight: FontWeight.w600,
-                ),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(_radius),
-                    color: AppColors.white,
-                    border: Border.all(
-                      color: onTap == null ? AppColors.darkGray : color,
-                      width: 1,
-                    )),
-              ),
+              child: customButtonBody ??
+                  Container(
+                    height: height ?? 56.height,
+                    alignment: Alignment.center,
+                    padding:
+                        padding ?? EdgeInsets.symmetric(horizontal: 48.width),
+                    child: AppText(
+                      title: title ?? "no title",
+                      color: onTap == null ? AppColors.darkGray : titleColor,
+                      fontSize: titleFontSize,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(_radius),
+                        color: AppColors.white,
+                        border: Border.all(
+                          color: onTap == null ? AppColors.darkGray : color,
+                          width: 1,
+                        )),
+                  ),
             ),
     );
   }

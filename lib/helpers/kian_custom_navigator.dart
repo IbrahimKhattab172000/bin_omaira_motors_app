@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:bin_omaira_motors/features/car_details/view/car_details_view.dart';
 import 'package:bin_omaira_motors/features/forgot_password/view/forgot_password_view.dart';
 import 'package:bin_omaira_motors/features/new_password/view/new_password_view.dart';
 import 'package:bin_omaira_motors/features/notifications/view/notifications_view.dart';
@@ -115,6 +116,9 @@ abstract class CustomNavigator {
         return pageRoute(const OrderDetailsView(
           type: 'new',
         ));
+
+      case Routes.CARDETAILS:
+        return pageRoute(const CarDetailsView());
 
 //?Good example
       // case Routes.UPDATE_BRANCH:

@@ -68,7 +68,14 @@
      "cause_of_order_rejection" : "Cause of order rejection",
      "lorem" : "Lorem ipsum dolor sit amet, adipiscingse sed do eiusmod tempor incididunt sed..",
      "order_details"  : "Order Details",
+     "describtion" : "Description",
+     "specifications" : "Specifications",
+     "without_vat" : "without vat",
+     "purchase" : "Purchase",
+     "reserve_with_only" :"Reserve with only",
 
+
+     
 
 
     "wnes": "Wanes",
@@ -115,7 +122,6 @@
     "product_details" : "Product Details",
     "type" : "Type",
     "weight" :"Weight (Approximate)",
-    "describtion" : "Description",
     "order_type" : "Order Type",
     "extra_service" : "Extra Service",
     "packaging"  :"Packaging",
