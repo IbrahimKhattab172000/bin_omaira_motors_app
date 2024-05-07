@@ -1,10 +1,12 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
+import 'package:flutter/material.dart';
+
 import 'package:bin_omaira_motors/features/success/widgets/success_app_bar.dart';
 import 'package:bin_omaira_motors/features/success/widgets/success_button.dart';
 import 'package:bin_omaira_motors/features/success/widgets/success_image_info.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
-import 'package:flutter/material.dart';
 
 class SuccessView extends StatelessWidget {
   final String imagePath;
@@ -12,20 +14,22 @@ class SuccessView extends StatelessWidget {
   final String subtitle;
   final String buttonTitle;
   final VoidCallback onTap;
-  const SuccessView({
-    super.key,
+  Color? backGroundColor;
+  SuccessView({
+    Key? key,
     required this.imagePath,
     required this.title,
     required this.subtitle,
     required this.buttonTitle,
     required this.onTap,
-  });
+    this.backGroundColor,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.black,
-      appBar: const SuccessAppBar(),
+      backgroundColor: backGroundColor ?? AppColors.black,
+      appBar: SuccessAppBar(backGroundColor: backGroundColor),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Padding(
@@ -38,6 +42,7 @@ class SuccessView extends StatelessWidget {
                 title: title,
                 subtitle: subtitle,
                 imagePath: imagePath,
+                backGroundColor: backGroundColor,
               ),
               SizedBox(height: 32.height),
               SuccessButton(

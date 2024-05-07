@@ -15,9 +15,10 @@ import 'package:bin_omaira_motors/features/signin/view/signin_view.dart';
 import 'package:bin_omaira_motors/features/signup/view/signup_view.dart';
 import 'package:bin_omaira_motors/features/splash/view/pre_splash_view.dart';
 import 'package:bin_omaira_motors/features/splash/view/splash_view.dart';
-import 'package:bin_omaira_motors/features/success/view/done_view.dart';
+import 'package:bin_omaira_motors/features/success/view/success_view.dart';
 import 'package:bin_omaira_motors/features/verification/view/verification_view.dart';
 import 'package:bin_omaira_motors/features/welcome/view/welcome_view.dart';
+import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:bin_omaira_motors/main_pages/kian_nav/kian_nav_view.dart';
 import 'package:bin_omaira_motors/my_app.dart';
@@ -140,6 +141,7 @@ abstract class CustomNavigator {
             subtitle: "your_request_was_sent_successfully",
             imagePath: "success_purchase",
             buttonTitle: "continue",
+            backGroundColor: AppColors.white,
             onTap: () {
               CustomNavigator.push(Routes.MAIN);
             },
