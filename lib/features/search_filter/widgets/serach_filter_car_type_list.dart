@@ -1,12 +1,13 @@
 import 'package:bin_omaira_motors/features/search_filter/widgets/search_filter_car_type_card.dart';
 import 'package:flutter/material.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
+import 'package:flutter/widgets.dart';
 
 class SearchFilterCarTypeList extends StatefulWidget {
   const SearchFilterCarTypeList({Key? key}) : super(key: key);
 
   @override
-  _SearchFilterCarTypeListState createState() =>
+  State<SearchFilterCarTypeList> createState() =>
       _SearchFilterCarTypeListState();
 }
 

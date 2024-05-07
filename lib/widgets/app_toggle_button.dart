@@ -8,7 +8,7 @@ class AppToggleButton extends StatelessWidget {
     required this.value,
     this.onChanged,
     this.rotate = true,
-    this.color = AppColors.primary,
+    this.color = AppColors.black,
   });
 
   final bool value;
@@ -24,16 +24,16 @@ class AppToggleButton extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(
-          color: value ? AppColors.primary : AppColors.black,
+          color: value ? AppColors.black : AppColors.darkGray,
           width: 2,
         ),
         color: AppColors.white,
       ),
-      padding: const EdgeInsets.all(1),
+      padding: const EdgeInsets.all(3),
       child: Container(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: value ? AppColors.primary : AppColors.white,
+          color: value ? AppColors.black : AppColors.white,
         ),
       ),
     );

@@ -97,7 +97,7 @@ class DropDownSelectionContent extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         border: Border.all(
-          color: AppColors.grey.withOpacity(0.3),
+          color: AppColors.grey.withOpacity(0.8),
         ),
         color: AppColors.white,
         borderRadius: BorderRadius.circular(12),

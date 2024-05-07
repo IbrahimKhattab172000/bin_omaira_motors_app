@@ -2,11 +2,13 @@ import 'dart:developer';
 
 import 'package:bin_omaira_motors/features/car_details/view/car_details_view.dart';
 import 'package:bin_omaira_motors/features/forgot_password/view/forgot_password_view.dart';
+import 'package:bin_omaira_motors/features/home/view/home_view.dart';
 import 'package:bin_omaira_motors/features/new_password/view/new_password_view.dart';
 import 'package:bin_omaira_motors/features/notifications/view/notifications_view.dart';
 import 'package:bin_omaira_motors/features/onboarding/view/onboarding_view.dart';
 import 'package:bin_omaira_motors/features/order_details/view/order_details_view.dart';
 import 'package:bin_omaira_motors/features/orders/view/orders_view.dart';
+import 'package:bin_omaira_motors/features/purchase/view/purchase_view.dart';
 import 'package:bin_omaira_motors/features/search/view/search_view.dart';
 import 'package:bin_omaira_motors/features/search_filter/view/search_filter_view.dart';
 import 'package:bin_omaira_motors/features/signin/view/signin_view.dart';
@@ -79,25 +81,34 @@ abstract class CustomNavigator {
 
       case Routes.SUCCESSPASSWORD:
         return pageRoute(
-          const SuccessView(
+          SuccessView(
             imagePath: "new_password_done",
             subtitle: "new_pass_done_subtitle",
             title: "new_pass_done_title",
             buttonTitle: "back_to_login",
+            onTap: () {
+              CustomNavigator.push(Routes.SIGNIN);
+            },
           ),
         );
       case Routes.SUCCESSREGISTER:
         return pageRoute(
-          const SuccessView(
+          SuccessView(
             title: "successfully_registered",
             subtitle: "successfully_registered_subtitle",
             imagePath: "successfully_registered",
             buttonTitle: "continue",
+            onTap: () {
+              CustomNavigator.push(Routes.SIGNIN);
+            },
           ),
         );
 
       case Routes.MAIN:
         return pageRoute(const MainPage());
+
+      case Routes.HOME:
+        return pageRoute(const HomeView());
 
       case Routes.NOTIFICATIONS:
         return pageRoute(const NotificationsView());
@@ -120,6 +131,20 @@ abstract class CustomNavigator {
       case Routes.CARDETAILS:
         return pageRoute(const CarDetailsView());
 
+      case Routes.PURCHASE:
+        return pageRoute(const PurchaseView());
+      case Routes.SUCCESSPURCHASE:
+        return pageRoute(
+          SuccessView(
+            title: "purchase_request_sent_successfully",
+            subtitle: "your_request_was_sent_successfully",
+            imagePath: "success_purchase",
+            buttonTitle: "continue",
+            onTap: () {
+              CustomNavigator.push(Routes.MAIN);
+            },
+          ),
+        );
 //?Good example
       // case Routes.UPDATE_BRANCH:
       //   return pageRoute(

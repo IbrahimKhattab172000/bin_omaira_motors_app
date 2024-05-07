@@ -8,7 +8,7 @@ class CarDetailsSwiper extends StatefulWidget {
   const CarDetailsSwiper({Key? key}) : super(key: key);
 
   @override
-  _CarDetailsSwiperState createState() => _CarDetailsSwiperState();
+  State<CarDetailsSwiper> createState() => _CarDetailsSwiperState();
 }
 
 class _CarDetailsSwiperState extends State<CarDetailsSwiper> {

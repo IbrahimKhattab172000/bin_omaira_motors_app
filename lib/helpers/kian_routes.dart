@@ -21,4 +21,6 @@ class Routes {
   static const OREDERS = "OREDERS";
   static const OREDERDETAILS = "OREDERDETAILS";
   static const CARDETAILS = "CARDETAILS";
+  static const PURCHASE = "PURCHASE";
+  static const SUCCESSPURCHASE = "SUCCESSPURCHASE";
 }

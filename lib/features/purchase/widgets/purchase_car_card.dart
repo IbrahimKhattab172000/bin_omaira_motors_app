@@ -2,26 +2,22 @@
 
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
-import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-class HomeRecommendationCard extends StatelessWidget {
-  const HomeRecommendationCard({
+class PurchaseCarCard extends StatelessWidget {
+  const PurchaseCarCard({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        CustomNavigator.push(Routes.CARDETAILS);
-      },
+      onTap: () {},
       child: Container(
-        width: 242.width,
+        // width: 242.width,
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: AppColors.white,
@@ -35,31 +31,11 @@ class HomeRecommendationCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                RichText(
-                  text: TextSpan(
-                    style: const TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.darkGray,
-                      decoration: TextDecoration.lineThrough,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: "before".tr() + " ",
-                      ),
-                      const TextSpan(
-                        text: "99,900 ",
-                        style: TextStyle(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w900,
-                          color: AppColors.primary,
-                        ),
-                      ),
-                      TextSpan(
-                        text: "sar".tr(),
-                      ),
-                    ],
-                  ),
+                AppText(
+                  title: "car_number".tr() + ":  " + "97364",
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.darkGray,
                 ),
                 Container(
                   width: 86.width,

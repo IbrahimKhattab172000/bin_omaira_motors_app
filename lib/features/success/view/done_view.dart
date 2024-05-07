@@ -3,8 +3,6 @@ import 'package:bin_omaira_motors/features/success/widgets/success_button.dart';
 import 'package:bin_omaira_motors/features/success/widgets/success_image_info.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
-import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:flutter/material.dart';
 
@@ -13,12 +11,14 @@ class SuccessView extends StatelessWidget {
   final String title;
   final String subtitle;
   final String buttonTitle;
+  final VoidCallback onTap;
   const SuccessView({
     super.key,
     required this.imagePath,
     required this.title,
     required this.subtitle,
     required this.buttonTitle,
+    required this.onTap,
   });
 
   @override
@@ -42,10 +42,8 @@ class SuccessView extends StatelessWidget {
               SizedBox(height: 32.height),
               SuccessButton(
                 buttonTitle: buttonTitle,
-                onTap: () {
-                  // RouteUtils.navigateTo(const SigninView());
-                  CustomNavigator.push(Routes.SIGNIN);
-                },
+                onTap: onTap,
+                // RouteUtils.navigateTo(const SigninView());
               ),
               SizedBox(height: Utils.bottomDevicePadding),
             ],

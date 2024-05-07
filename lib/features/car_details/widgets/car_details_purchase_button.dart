@@ -1,5 +1,7 @@
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:bin_omaira_motors/widgets/app_button.dart';
 import 'package:bin_omaira_motors/widgets/app_text.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -14,7 +16,9 @@ class CarDetailsPurchaseButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppButton(
       color: AppColors.primary,
-      onTap: () {},
+      onTap: () {
+        CustomNavigator.push(Routes.PURCHASE);
+      },
       padding: const EdgeInsets.symmetric(
         horizontal: 16,
         vertical: 8,

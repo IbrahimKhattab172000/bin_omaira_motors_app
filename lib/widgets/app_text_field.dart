@@ -16,7 +16,7 @@ class AppTextField extends StatefulWidget {
     this.leading,
     this.label,
     this.maxLines = 1,
-    this.borderColor = Colors.grey,
+    this.borderColor = AppColors.grey,
     this.fillColor = AppColors.black,
     this.onSaved,
     this.onChanged,
@@ -126,7 +126,7 @@ class _AppTextFieldState extends State<AppTextField> {
                 focusedBorder: _border(
                   (widget.transperent ?? false)
                       ? Colors.transparent
-                      : AppColors.grey,
+                      : widget.borderColor,
                   width: 1,
                 ),
                 errorBorder: _border((widget.transperent ?? false)
@@ -135,7 +135,7 @@ class _AppTextFieldState extends State<AppTextField> {
                 focusedErrorBorder: _border(
                   (widget.transperent ?? false)
                       ? Colors.transparent
-                      : AppColors.grey,
+                      : widget.borderColor,
                   width: 11,
                 ),
               ),
