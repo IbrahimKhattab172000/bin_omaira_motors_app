@@ -1,4 +1,5 @@
 import 'package:bin_omaira_motors/features/home/view/home_view.dart';
+import 'package:bin_omaira_motors/features/more/views/more_view.dart';
 import 'package:bin_omaira_motors/features/orders/view/orders_view.dart';
 import 'package:bin_omaira_motors/features/search/view/search_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
@@ -10,13 +11,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MainPage extends StatefulWidget {
+class MainPageView extends StatefulWidget {
   final int? index;
 
-  const MainPage({Key? key, this.index}) : super(key: key);
+  const MainPageView({Key? key, this.index}) : super(key: key);
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<MainPageView> createState() => _MainPageViewState();
 }
 
 Widget icon({
@@ -33,7 +34,7 @@ Widget icon({
       ),
     );
 
-class _MainPageState extends State<MainPage> {
+class _MainPageViewState extends State<MainPageView> {
   @override
   void initState() {
     // UserBloc.instance.add(Click());
@@ -138,7 +139,7 @@ Widget body({required int index}) {
     case 3:
       // MyClassesBloc.instance.clearFilters();
       // MyClassesBloc.instance.add(Get());
-      return const HomeView();
+      return const MoreView();
     default:
       return Container(
         color: AppColors.darkGray,

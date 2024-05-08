@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:bin_omaira_motors/features/car_details/view/car_details_view.dart';
 import 'package:bin_omaira_motors/features/forgot_password/view/forgot_password_view.dart';
 import 'package:bin_omaira_motors/features/home/view/home_view.dart';
+import 'package:bin_omaira_motors/features/more/views/more_view.dart';
 import 'package:bin_omaira_motors/features/new_password/view/new_password_view.dart';
 import 'package:bin_omaira_motors/features/notifications/view/notifications_view.dart';
 import 'package:bin_omaira_motors/features/onboarding/view/onboarding_view.dart';
@@ -20,7 +21,7 @@ import 'package:bin_omaira_motors/features/verification/view/verification_view.d
 import 'package:bin_omaira_motors/features/welcome/view/welcome_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/kian_routes.dart';
-import 'package:bin_omaira_motors/main_pages/kian_nav/kian_nav_view.dart';
+import 'package:bin_omaira_motors/main_pages/kian_nav/main_page_view.dart';
 import 'package:bin_omaira_motors/my_app.dart';
 import 'package:flutter/material.dart';
 
@@ -106,7 +107,7 @@ abstract class CustomNavigator {
         );
 
       case Routes.MAIN:
-        return pageRoute(const MainPage());
+        return pageRoute(const MainPageView());
 
       case Routes.HOME:
         return pageRoute(const HomeView());
@@ -134,6 +135,7 @@ abstract class CustomNavigator {
 
       case Routes.PURCHASE:
         return pageRoute(const PurchaseView());
+
       case Routes.SUCCESSPURCHASE:
         return pageRoute(
           SuccessView(
@@ -147,6 +149,10 @@ abstract class CustomNavigator {
             },
           ),
         );
+
+      case Routes.MORE:
+        return pageRoute(const MoreView());
+
 //?Good example
       // case Routes.UPDATE_BRANCH:
       //   return pageRoute(

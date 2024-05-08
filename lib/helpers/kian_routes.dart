@@ -23,4 +23,5 @@ class Routes {
   static const CARDETAILS = "CARDETAILS";
   static const PURCHASE = "PURCHASE";
   static const SUCCESSPURCHASE = "SUCCESSPURCHASE";
+  static const MORE = "MORE";
 }

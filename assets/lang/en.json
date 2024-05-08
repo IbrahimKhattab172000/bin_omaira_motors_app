@@ -95,6 +95,20 @@
      "agency_file" : "Agency file",
      "purchase_request_sent_successfully" : "Purchase request sent successfully",
      "your_request_was_sent_successfully" : "Your request was sent successfully, we will contact you within 24 hours",
+     "my_account" : "My Account",
+     "change_language" : "Change language",
+     "about_us" :"About Us",
+     "after_sale_services"  :"After sale services",
+     "our_branches" : "Our branches",
+     "terms_and_conditions_2" : "Terms & conditions",
+     "usage_policy" : "Usage Policy",
+     "faq" : "FAQs",
+     "contact_us" :"Contact Us",
+     "logout" :"Logout",
+
+
+     
+
 
 
     "wnes": "Wanes",
@@ -185,13 +199,9 @@
     "favorite" :"Favorites",
     "locations"  :"Locations",
     "language" :"Language",
-    "about_us" :"About Us",
-    "contact_us" :"Contact Us",
     "policy" : "Privacy Policy",
     "return_and_exchange_policy" :"Return and Exchange Policy",
     "shipping_and_delivery_policy" :"Shipping and Delivery Policy",
-    "faq" : "FAQs",
-    "logout" :"Logout",
     "current" :"Current",
     "done" : "Done",
     "in_delivery" : "In Delivery",
