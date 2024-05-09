@@ -33,7 +33,8 @@ class MyAccountView extends StatelessWidget {
       body: AppWhiteBody(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
+          child: ListView(
+            physics: const BouncingScrollPhysics(),
             children: [
               SizedBox(height: 32.height),
               const MyAccountAvatar(),
@@ -41,7 +42,7 @@ class MyAccountView extends StatelessWidget {
               const MyAccountForms(),
               SizedBox(height: 16.height),
               const MyAccountChangePassWidget(),
-              const Spacer(),
+              SizedBox(height: 64.height),
               const MyAccountButtons(),
               SizedBox(height: Utils.bottomDevicePadding),
             ],
