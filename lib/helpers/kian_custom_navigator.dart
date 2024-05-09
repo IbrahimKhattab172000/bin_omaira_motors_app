@@ -4,6 +4,7 @@ import 'package:bin_omaira_motors/features/car_details/view/car_details_view.dar
 import 'package:bin_omaira_motors/features/forgot_password/view/forgot_password_view.dart';
 import 'package:bin_omaira_motors/features/home/view/home_view.dart';
 import 'package:bin_omaira_motors/features/more/views/more_view.dart';
+import 'package:bin_omaira_motors/features/my_account/views/my_account_view.dart';
 import 'package:bin_omaira_motors/features/new_password/view/new_password_view.dart';
 import 'package:bin_omaira_motors/features/notifications/view/notifications_view.dart';
 import 'package:bin_omaira_motors/features/onboarding/view/onboarding_view.dart';
@@ -152,6 +153,9 @@ abstract class CustomNavigator {
 
       case Routes.MORE:
         return pageRoute(const MoreView());
+
+      case Routes.MYACCOUNT:
+        return pageRoute(const MyAccountView());
 
 //?Good example
       // case Routes.UPDATE_BRANCH:

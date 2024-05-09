@@ -1,6 +1,8 @@
 import 'package:bin_omaira_motors/features/more/widgets/more_card.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_appbar.dart';
 import 'package:bin_omaira_motors/widgets/app_white_body.dart';
@@ -25,7 +27,9 @@ class MoreView extends StatelessWidget {
             SizedBox(height: 42.height),
             MoreCard(
               title: "my_account",
-              onTap: () {},
+              onTap: () {
+                CustomNavigator.push(Routes.MYACCOUNT);
+              },
               imagePath: "user",
               borderRadiusGeometry: BorderRadius.circular(14),
             ),

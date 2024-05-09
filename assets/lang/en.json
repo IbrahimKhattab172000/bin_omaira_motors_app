@@ -105,8 +105,13 @@
      "faq" : "FAQs",
      "contact_us" :"Contact Us",
      "logout" :"Logout",
+     "change_password" :"Change Password",
+     "save_changes" :"Save Changes",
+     "delete_account" : "Delete Account",
 
 
+
+     
      
 
 
@@ -232,8 +237,6 @@
      "order_number"  : "Order Number",
      "dummy_product_name" : "Fresh Beef Strips",
      "a_discount" : "Discount",
-     "save_changes" :"Save Changes",
-     "delete_account" : "Delete Account",
      "our_view" : "Our View",
      "our_mission" : "Our Mission",
      "our_values" : "Our Values",
