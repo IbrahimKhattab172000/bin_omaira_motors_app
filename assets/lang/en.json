@@ -110,7 +110,8 @@
      "delete_account" : "Delete Account",
      "new_password" : "New Password",
      "confirm_new_password" : "Confirm New Password",
-
+     "arabic" : "Arabic",
+     "english" : "English",
 
 
 
@@ -234,8 +235,6 @@
      "save" : "Save",
      "no_notifications_start_using_the_app" :"No notifications yet. Start using the app!",
      "your_order_has_been_accepted_and_in_process" :"Your order has been accepted and is being processed",
-     "arabic" : "Arabic",
-     "english" : "English",
      "order_from_anywhere_and_we_will_reach_you_wherever_you_are" :"Order from anywhere, and we will reach you wherever you are",
      "dummy_text"  :"This text is a placeholder. You can generate similar text or many other texts using the Arabic text generator. ",
      "home_delivery_service" : "Home Delivery Service",

@@ -26,4 +26,5 @@ class Routes {
   static const MORE = "MORE";
   static const MYACCOUNT = "MYACCOUNT";
   static const CHNAGEPASSWORD = "CHNAGEPASSWORD";
+  static const CHNAGELANGUAGE = "CHNAGELANGUAGE";
 }

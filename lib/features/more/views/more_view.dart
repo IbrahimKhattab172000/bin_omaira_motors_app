@@ -36,7 +36,9 @@ class MoreView extends StatelessWidget {
             SizedBox(height: 16.height),
             MoreCard(
               title: "change_language",
-              onTap: () {},
+              onTap: () {
+                CustomNavigator.push(Routes.CHNAGELANGUAGE);
+              },
               imagePath: "globe-fill",
               borderRadiusGeometry: BorderRadius.circular(14),
             ),
