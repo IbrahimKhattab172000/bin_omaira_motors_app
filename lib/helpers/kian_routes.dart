@@ -28,4 +28,5 @@ class Routes {
   static const CHNAGEPASSWORD = "CHNAGEPASSWORD";
   static const CHNAGELANGUAGE = "CHNAGELANGUAGE";
   static const ABOUTUS = "ABOUTUS";
+  static const OURBRANCHES = "OURBRANCHES";
 }

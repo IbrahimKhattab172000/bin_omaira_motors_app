@@ -63,7 +63,9 @@ class MoreView extends StatelessWidget {
             SizedBox(height: 2.height),
             MoreCard(
               title: "our_branches",
-              onTap: () {},
+              onTap: () {
+                CustomNavigator.push(Routes.OURBRANCHES);
+              },
               imagePath: "building2_fill",
             ),
             SizedBox(height: 2.height),
