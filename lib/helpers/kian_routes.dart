@@ -30,4 +30,5 @@ class Routes {
   static const ABOUTUS = "ABOUTUS";
   static const OURBRANCHES = "OURBRANCHES";
   static const TERMSANDCONDITIONS = "TERMSANDCONDITIONS";
+  static const USAGEPOLICY = "USAGEPOLICY";
 }

@@ -79,7 +79,9 @@ class MoreView extends StatelessWidget {
             SizedBox(height: 2.height),
             MoreCard(
               title: "usage_policy",
-              onTap: () {},
+              onTap: () {
+                CustomNavigator.push(Routes.USAGEPOLICY);
+              },
               imagePath: "document2",
             ),
             SizedBox(height: 2.height),
