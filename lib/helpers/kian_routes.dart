@@ -27,4 +27,5 @@ class Routes {
   static const MYACCOUNT = "MYACCOUNT";
   static const CHNAGEPASSWORD = "CHNAGEPASSWORD";
   static const CHNAGELANGUAGE = "CHNAGELANGUAGE";
+  static const ABOUTUS = "ABOUTUS";
 }

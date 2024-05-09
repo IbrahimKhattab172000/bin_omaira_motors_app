@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:bin_omaira_motors/features/about_us/view/about_us_view.dart';
 import 'package:bin_omaira_motors/features/car_details/view/car_details_view.dart';
 import 'package:bin_omaira_motors/features/change_language/view/change_language_view.dart';
 import 'package:bin_omaira_motors/features/change_password/view/change_password_view.dart';
@@ -164,6 +165,9 @@ abstract class CustomNavigator {
 
       case Routes.CHNAGELANGUAGE:
         return pageRoute(const ChangeLanguageView());
+
+      case Routes.ABOUTUS:
+        return pageRoute(const AboutUsView());
 
 //?Good example
       // case Routes.UPDATE_BRANCH:

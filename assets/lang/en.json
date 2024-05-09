@@ -112,7 +112,9 @@
      "confirm_new_password" : "Confirm New Password",
      "arabic" : "Arabic",
      "english" : "English",
-
+     "our_vision" : "Our Vision",
+     "our_mission" : "Our Mission",
+     "our_values" : "Our Values",
 
 
 
@@ -241,9 +243,7 @@
      "order_number"  : "Order Number",
      "dummy_product_name" : "Fresh Beef Strips",
      "a_discount" : "Discount",
-     "our_view" : "Our View",
-     "our_mission" : "Our Mission",
-     "our_values" : "Our Values",
+   
      "message_body" : "Message Body",
      "leave_the_message_here" : "Leave your message here",
      "send" : "Send",

@@ -45,7 +45,9 @@ class MoreView extends StatelessWidget {
             SizedBox(height: 16.height),
             MoreCard(
               title: "about_us",
-              onTap: () {},
+              onTap: () {
+                CustomNavigator.push(Routes.ABOUTUS);
+              },
               imagePath: "more_app_logo",
               borderRadiusGeometry: const BorderRadius.only(
                 topLeft: Radius.circular(14),
