@@ -108,9 +108,16 @@
      "change_password" :"Change Password",
      "save_changes" :"Save Changes",
      "delete_account" : "Delete Account",
+     "new_password" : "New Password",
+     "confirm_new_password" : "Confirm New Password",
 
 
 
+
+
+
+
+     
      
      
 
@@ -137,8 +144,6 @@
     "send_code" : "Send Code",
     "didnt_recive_the_code" : "Didn't receive the message?",
     "resending_in" : "Resending in",
-    "new_password" : "New Password",
-    "confirm_new_password" : "Confirm New Password",
     "resetting_the_password" :"Resetting the Password",
     "reset_password_note" : "Your new password must be entirely different from your old password",
     "reset_password" : "Reset Password",

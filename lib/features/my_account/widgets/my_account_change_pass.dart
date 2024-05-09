@@ -2,6 +2,8 @@
 
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
+import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:bin_omaira_motors/widgets/app_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +21,9 @@ class _MyAccountChangePassWidgetState extends State<MyAccountChangePassWidget> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        CustomNavigator.push(Routes.CHNAGEPASSWORD);
+      },
       child: Container(
         height: 52.height,
         decoration: BoxDecoration(

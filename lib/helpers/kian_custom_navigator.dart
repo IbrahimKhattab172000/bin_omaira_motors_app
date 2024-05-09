@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:bin_omaira_motors/features/car_details/view/car_details_view.dart';
+import 'package:bin_omaira_motors/features/change_password/view/change_password_view.dart';
 import 'package:bin_omaira_motors/features/forgot_password/view/forgot_password_view.dart';
 import 'package:bin_omaira_motors/features/home/view/home_view.dart';
 import 'package:bin_omaira_motors/features/more/views/more_view.dart';
@@ -156,6 +157,9 @@ abstract class CustomNavigator {
 
       case Routes.MYACCOUNT:
         return pageRoute(const MyAccountView());
+
+      case Routes.CHNAGEPASSWORD:
+        return pageRoute(const ChangePasswordView());
 
 //?Good example
       // case Routes.UPDATE_BRANCH:
