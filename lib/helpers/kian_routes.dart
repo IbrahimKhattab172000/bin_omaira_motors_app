@@ -29,4 +29,5 @@ class Routes {
   static const CHNAGELANGUAGE = "CHNAGELANGUAGE";
   static const ABOUTUS = "ABOUTUS";
   static const OURBRANCHES = "OURBRANCHES";
+  static const TERMSANDCONDITIONS = "TERMSANDCONDITIONS";
 }

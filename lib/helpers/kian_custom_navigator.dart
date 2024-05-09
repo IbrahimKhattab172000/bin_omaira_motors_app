@@ -22,6 +22,7 @@ import 'package:bin_omaira_motors/features/signup/view/signup_view.dart';
 import 'package:bin_omaira_motors/features/splash/view/pre_splash_view.dart';
 import 'package:bin_omaira_motors/features/splash/view/splash_view.dart';
 import 'package:bin_omaira_motors/features/success/view/success_view.dart';
+import 'package:bin_omaira_motors/features/terms_and_conditions/view/terms_and_conditions_view.dart';
 import 'package:bin_omaira_motors/features/verification/view/verification_view.dart';
 import 'package:bin_omaira_motors/features/welcome/view/welcome_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
@@ -172,6 +173,9 @@ abstract class CustomNavigator {
 
       case Routes.OURBRANCHES:
         return pageRoute(const OurBranchesView());
+
+      case Routes.TERMSANDCONDITIONS:
+        return pageRoute(const TermsAndConditionsView());
 
 //?Good example
       // case Routes.UPDATE_BRANCH:
