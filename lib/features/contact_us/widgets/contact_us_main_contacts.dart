@@ -26,8 +26,8 @@ class ContactUsMainContacts extends StatelessWidget {
             height: 70.height,
           ),
           const ContactUsCard(
-            imagePath: "phone",
-            title: "contact_number",
+            imagePath: "message",
+            title: "email_address",
             value: "BinOmaira@gmail.com",
           ),
         ],
