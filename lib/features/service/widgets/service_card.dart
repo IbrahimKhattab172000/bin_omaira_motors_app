@@ -29,7 +29,7 @@ class ServiceCard extends StatelessWidget {
             ),
           ),
           const Positioned(
-            top: 24,
+            bottom: 64,
             left: 24,
             child: AppText(
               title: "The best car",
@@ -39,7 +39,7 @@ class ServiceCard extends StatelessWidget {
             ),
           ),
           const Positioned(
-            top: 60,
+            bottom: 24,
             left: 24,
             child: AppText(
               title: "Here are some of the\nbest cars this year",
