@@ -95,7 +95,9 @@ class MoreView extends StatelessWidget {
             SizedBox(height: 2.height),
             MoreCard(
               title: "contact_us",
-              onTap: () {},
+              onTap: () {
+                CustomNavigator.push(Routes.CONTACTUS);
+              },
               imagePath: "phone",
               borderRadiusGeometry: const BorderRadius.only(
                 bottomLeft: Radius.circular(14),

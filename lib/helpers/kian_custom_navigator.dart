@@ -5,6 +5,7 @@ import 'package:bin_omaira_motors/features/after_sale_services/view/after_sale_v
 import 'package:bin_omaira_motors/features/car_details/view/car_details_view.dart';
 import 'package:bin_omaira_motors/features/change_language/view/change_language_view.dart';
 import 'package:bin_omaira_motors/features/change_password/view/change_password_view.dart';
+import 'package:bin_omaira_motors/features/contact_us/view/contact_us_view.dart';
 import 'package:bin_omaira_motors/features/forgot_password/view/forgot_password_view.dart';
 import 'package:bin_omaira_motors/features/home/view/home_view.dart';
 import 'package:bin_omaira_motors/features/more/views/more_view.dart';
@@ -185,8 +186,12 @@ abstract class CustomNavigator {
 
       case Routes.AFTERSALESERVICE:
         return pageRoute(const AfterSaleView());
+
       case Routes.SERVICE:
         return pageRoute(const ServiceView());
+
+      case Routes.CONTACTUS:
+        return pageRoute(const ContactUsView());
 
 //?Good example
       // case Routes.UPDATE_BRANCH:
