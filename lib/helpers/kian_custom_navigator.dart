@@ -6,6 +6,7 @@ import 'package:bin_omaira_motors/features/car_details/view/car_details_view.dar
 import 'package:bin_omaira_motors/features/change_language/view/change_language_view.dart';
 import 'package:bin_omaira_motors/features/change_password/view/change_password_view.dart';
 import 'package:bin_omaira_motors/features/contact_us/view/contact_us_view.dart';
+import 'package:bin_omaira_motors/features/faq/view/faq_view.dart';
 import 'package:bin_omaira_motors/features/forgot_password/view/forgot_password_view.dart';
 import 'package:bin_omaira_motors/features/home/view/home_view.dart';
 import 'package:bin_omaira_motors/features/more/views/more_view.dart';
@@ -192,6 +193,9 @@ abstract class CustomNavigator {
 
       case Routes.CONTACTUS:
         return pageRoute(const ContactUsView());
+
+      case Routes.FAQ:
+        return pageRoute(FaqView());
 
 //?Good example
       // case Routes.UPDATE_BRANCH:

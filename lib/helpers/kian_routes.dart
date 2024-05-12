@@ -34,4 +34,5 @@ class Routes {
   static const AFTERSALESERVICE = "AFTERSALESERVICE";
   static const SERVICE = "SERVICE";
   static const CONTACTUS = "CONTACTUS";
+  static const FAQ = "FAQ";
 }
