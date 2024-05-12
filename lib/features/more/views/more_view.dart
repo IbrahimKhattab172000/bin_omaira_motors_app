@@ -57,7 +57,9 @@ class MoreView extends StatelessWidget {
             SizedBox(height: 2.height),
             MoreCard(
               title: "after_sale_services",
-              onTap: () {},
+              onTap: () {
+                CustomNavigator.push(Routes.AFTERSALESERVICE);
+              },
               imagePath: "speedometer_fill",
             ),
             SizedBox(height: 2.height),
@@ -92,9 +94,9 @@ class MoreView extends StatelessWidget {
             ),
             SizedBox(height: 2.height),
             MoreCard(
-              title: "faq",
+              title: "contact_us",
               onTap: () {},
-              imagePath: "communication",
+              imagePath: "phone",
               borderRadiusGeometry: const BorderRadius.only(
                 bottomLeft: Radius.circular(14),
                 bottomRight: Radius.circular(14),

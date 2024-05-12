@@ -31,4 +31,6 @@ class Routes {
   static const OURBRANCHES = "OURBRANCHES";
   static const TERMSANDCONDITIONS = "TERMSANDCONDITIONS";
   static const USAGEPOLICY = "USAGEPOLICY";
+  static const AFTERSALESERVICE = "AFTERSALESERVICE";
+  static const SERVICE = "SERVICE";
 }

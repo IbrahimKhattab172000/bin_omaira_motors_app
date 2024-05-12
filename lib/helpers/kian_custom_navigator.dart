@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:bin_omaira_motors/features/about_us/view/about_us_view.dart';
+import 'package:bin_omaira_motors/features/after_sale_services/view/after_sale_view.dart';
 import 'package:bin_omaira_motors/features/car_details/view/car_details_view.dart';
 import 'package:bin_omaira_motors/features/change_language/view/change_language_view.dart';
 import 'package:bin_omaira_motors/features/change_password/view/change_password_view.dart';
@@ -17,6 +18,7 @@ import 'package:bin_omaira_motors/features/our_branches/view/our_branches_view.d
 import 'package:bin_omaira_motors/features/purchase/view/purchase_view.dart';
 import 'package:bin_omaira_motors/features/search/view/search_view.dart';
 import 'package:bin_omaira_motors/features/search_filter/view/search_filter_view.dart';
+import 'package:bin_omaira_motors/features/service/view/service_view.dart';
 import 'package:bin_omaira_motors/features/signin/view/signin_view.dart';
 import 'package:bin_omaira_motors/features/signup/view/signup_view.dart';
 import 'package:bin_omaira_motors/features/splash/view/pre_splash_view.dart';
@@ -180,6 +182,11 @@ abstract class CustomNavigator {
 
       case Routes.USAGEPOLICY:
         return pageRoute(const UsagePolicyView());
+
+      case Routes.AFTERSALESERVICE:
+        return pageRoute(const AfterSaleView());
+      case Routes.SERVICE:
+        return pageRoute(const ServiceView());
 
 //?Good example
       // case Routes.UPDATE_BRANCH:
