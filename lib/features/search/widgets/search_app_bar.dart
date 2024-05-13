@@ -14,46 +14,50 @@ class SearchAppBar extends StatelessWidget implements PreferredSizeWidget {
     super.key,
   });
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 20);
+  Size get preferredSize => const Size.fromHeight(120);
   @override
   Widget build(BuildContext context) {
     return AppAppBar(
-      customWidget: Row(
-        children: [
-          Expanded(
-            child: AppTextField(
-              textColor: AppColors.darkGray,
-              cursorColor: AppColors.darkGray,
-              hint: "what_you_looking_for".tr(),
-              hintColor: AppColors.darkGray,
-              leading: const Icon(
-                FontAwesomeIcons.magnifyingGlass,
-                color: AppColors.darkGray,
-                size: 24,
-              ),
-              fillColor: AppColors.black,
-            ),
-          ),
-          SizedBox(width: 16.width),
-          InkWell(
-            onTap: () {
-              CustomNavigator.push(Routes.SEARCHFILTER);
-            },
-            child: Container(
-              padding: const EdgeInsets.all(16),
-              width: 54.width,
-              decoration: BoxDecoration(
-                border: Border.all(color: AppColors.darkGray, width: 1),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Image.asset(
-                Utils.getAssetPNGPath("settings"),
-                height: 16,
-                color: AppColors.grey,
+      appbarHeight: 120,
+      customWidget: Transform.translate(
+        offset: Offset(0, 10),
+        child: Row(
+          children: [
+            Expanded(
+              child: AppTextField(
+                textColor: AppColors.darkGray,
+                cursorColor: AppColors.darkGray,
+                hint: "what_you_looking_for".tr(),
+                hintColor: AppColors.darkGray,
+                leading: const Icon(
+                  FontAwesomeIcons.magnifyingGlass,
+                  color: AppColors.darkGray,
+                  size: 24,
+                ),
+                fillColor: AppColors.black,
               ),
             ),
-          ),
-        ],
+            SizedBox(width: 16.width),
+            InkWell(
+              onTap: () {
+                CustomNavigator.push(Routes.SEARCHFILTER);
+              },
+              child: Container(
+                padding: const EdgeInsets.all(16),
+                width: 54.width,
+                decoration: BoxDecoration(
+                  border: Border.all(color: AppColors.darkGray, width: 1),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Image.asset(
+                  Utils.getAssetPNGPath("settings"),
+                  height: 16,
+                  color: AppColors.grey,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

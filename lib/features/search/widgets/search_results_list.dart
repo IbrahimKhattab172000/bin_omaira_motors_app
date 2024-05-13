@@ -9,7 +9,7 @@ class SearchResultsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.separated(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
         // shrinkWrap: true,
         scrollDirection: Axis.vertical,
         physics: const BouncingScrollPhysics(),
