@@ -17,6 +17,7 @@ class AppDialog extends StatelessWidget {
   final bool? warning;
   final String buttonTitle;
   final VoidCallback buttonOnTap;
+  final double dialogHeight;
 
   const AppDialog({
     super.key,
@@ -28,6 +29,7 @@ class AppDialog extends StatelessWidget {
     required this.buttonOnTap,
     required this.hasTopColouredContainer,
     required this.warning,
+    required this.dialogHeight,
   });
 
   static Future<dynamic> show({
@@ -39,6 +41,7 @@ class AppDialog extends StatelessWidget {
     VoidCallback? buttonOnTap,
     bool? hasTopColouredContainer,
     bool? warning,
+    double dialogHeight = 300,
   }) {
     return showDialog(
       context: CustomNavigator.context,
@@ -47,6 +50,7 @@ class AppDialog extends StatelessWidget {
         return AppDialog(
           child: child,
           dismissible: dismissible,
+          dialogHeight: dialogHeight,
           title: title ?? "no_data".tr(),
           hasButton: hasButton,
           buttonTitle: buttonTitle ?? "login".tr(),
@@ -70,7 +74,8 @@ class AppDialog extends StatelessWidget {
         borderRadius: BorderRadius.circular(16.0),
       ),
       child: Container(
-        height: 400.height,
+        height: dialogHeight,
+        width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           color: null,

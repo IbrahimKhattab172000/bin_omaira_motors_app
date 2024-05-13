@@ -4,6 +4,8 @@ import 'package:bin_omaira_motors/features/purchase/bloc/purchase/cubit.dart';
 import 'package:bin_omaira_motors/features/purchase/widgets/purchase_bank_item.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
+import 'package:bin_omaira_motors/helpers/utils.dart';
+import 'package:bin_omaira_motors/widgets/app_dialog.dart';
 import 'package:bin_omaira_motors/widgets/app_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -100,7 +102,82 @@ class PurchaseDeposite extends StatelessWidget {
                     title: banksData[index]['title'],
                     isSelected: cubit.currentBankIndex == index,
                     onTap: () {
+                      String bank = banksData[index]['title'];
                       cubit.changeBankIndex(index);
+                      AppDialog.show(
+                        dialogHeight: 286.height,
+                        dismissible: true,
+                        hasButton: false,
+                        buttonTitle: "buttonTitle",
+                        buttonOnTap: () {},
+                        hasTopColouredContainer: false,
+                        warning: false,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 24),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SizedBox(height: 62.height),
+                              Image.asset(
+                                Utils.getAssetPNGPath(
+                                  banksData[index]['image'],
+                                ),
+                              ),
+                              SizedBox(height: 12.height),
+                              AppText(
+                                title: bank.tr(),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: AppColors.black,
+                              ),
+                              SizedBox(height: 42.height),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  AppText(
+                                    title: "Account number",
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: AppColors.black,
+                                  ),
+                                  AppText(
+                                    title: "xxxxxxxxx",
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: AppColors.black,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 12.height),
+                              Container(
+                                color: AppColors.grey,
+                                width: double.infinity,
+                                height: 1,
+                              ),
+                              SizedBox(height: 12.height),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  AppText(
+                                    title: "Account number",
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: AppColors.black,
+                                  ),
+                                  AppText(
+                                    title: "xxxxxxxxx",
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    color: AppColors.black,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
                     },
                   );
                 },

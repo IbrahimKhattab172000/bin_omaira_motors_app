@@ -113,6 +113,7 @@ class MoreView extends StatelessWidget {
               title: "logout",
               onTap: () {
                 AppDialog.show(
+                  dialogHeight: 380.height,
                   hasButton: true,
                   hasTopColouredContainer: false,
                   dismissible: true,

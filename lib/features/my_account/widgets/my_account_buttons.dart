@@ -28,6 +28,7 @@ class MyAccountButtons extends StatelessWidget {
           title: "delete_account".tr(),
           onTap: () {
             AppDialog.show(
+              dialogHeight: 380.height,
               hasButton: true,
               hasTopColouredContainer: false,
               dismissible: true,
