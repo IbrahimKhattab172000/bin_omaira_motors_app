@@ -40,17 +40,22 @@ class HomeSearchWithFilterBar extends StatelessWidget {
             ),
           ),
           SizedBox(width: 16.width),
-          Container(
-            padding: const EdgeInsets.all(14),
-            width: 54.width,
-            decoration: BoxDecoration(
-              border: Border.all(color: AppColors.grey, width: 1),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Image.asset(
-              Utils.getAssetPNGPath("settings"),
-              height: 16,
-              color: AppColors.darkGray,
+          InkWell(
+            onTap: () {
+              context.read<NavBarCubit>().changeView(1);
+            },
+            child: Container(
+              padding: const EdgeInsets.all(14),
+              width: 54.width,
+              decoration: BoxDecoration(
+                border: Border.all(color: AppColors.grey, width: 1),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Image.asset(
+                Utils.getAssetPNGPath("settings"),
+                height: 16,
+                color: AppColors.darkGray,
+              ),
             ),
           ),
         ],
