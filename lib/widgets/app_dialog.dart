@@ -3,7 +3,6 @@
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
 import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
-import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_button.dart';
 import 'package:bin_omaira_motors/widgets/app_text.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -64,9 +63,9 @@ class AppDialog extends StatelessWidget {
         constrainedAxis: Axis.horizontal,
         child: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(28),
-            color: AppColors.white,
-            border: Border.all(width: 4, color: AppColors.white),
+            borderRadius: BorderRadius.circular(16),
+            color: null,
+            // border: Border.all(width: 4, color: AppColors.white),
           ),
           margin: EdgeInsets.only(
             left: 20,
@@ -75,66 +74,71 @@ class AppDialog extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Stack(
-                children: [
-                  Container(
-                    height: 60.height,
-                    width: double.infinity,
-                    decoration: const BoxDecoration(
-                      color: AppColors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(25),
-                        topRight: Radius.circular(25),
-                      ),
-                    ),
-                    alignment: Alignment.center,
-                    child: AppText(
-                      textAlign: TextAlign.center,
-                      title: title,
-                      color: AppColors.primary,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w700,
-                    ),
+              Container(
+                height: 60.height,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  color: Color(0xffF9F9F9),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25),
+                    topRight: Radius.circular(25),
                   ),
-                  if (dismissible)
-                    Positioned(
-                      top: 0,
-                      bottom: 0,
-                      left: Utils.isAR ? null : 12,
-                      right: Utils.isAR ? 12 : null,
-                      child: UnconstrainedBox(
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    AppText(
+                      padding: const EdgeInsets.symmetric(horizontal: 24),
+                      textAlign: TextAlign.start,
+                      title: title,
+                      color: AppColors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    if (dismissible)
+                      UnconstrainedBox(
                         child: InkWell(
                           onTap: () => Navigator.pop(context),
                           child: Container(
                             height: 32.width,
                             width: 32.width,
+                            margin: const EdgeInsets.symmetric(horizontal: 24),
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(25),
-                              color: AppColors.primary,
+                              borderRadius: BorderRadius.circular(16),
+                              color: Colors.transparent,
                             ),
                             child: const Icon(
                               Icons.close,
-                              color: AppColors.white,
+                              color: AppColors.black,
                               size: 20,
                             ),
                           ),
                         ),
                       ),
-                    ),
-                ],
+                  ],
+                ),
               ),
-              Column(
-                children: [
-                  child,
-                  if (hasButton)
-                    Padding(
-                      padding: const EdgeInsets.all(12),
-                      child: AppButton(
-                        title: buttonTitle,
-                        onTap: buttonOnTap,
+              Container(
+                decoration: const BoxDecoration(
+                  color: AppColors.white,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(16),
+                    bottomRight: Radius.circular(16),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    child,
+                    if (hasButton)
+                      Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: AppButton(
+                          title: buttonTitle,
+                          onTap: buttonOnTap,
+                        ),
                       ),
-                    ),
-                ],
+                  ],
+                ),
               ),
             ],
           ),
