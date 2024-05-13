@@ -22,6 +22,7 @@ class CarDetailsSpesification extends StatelessWidget {
         CarDetailsSpesificationElement(
           onTap: () {
             AppDialog.show(
+              hasTopColouredContainer: true,
               title: "Engine specifications",
               child: ListView.separated(
                 itemCount: 4,

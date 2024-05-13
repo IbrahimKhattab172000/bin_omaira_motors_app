@@ -124,8 +124,10 @@
      "submit" : "Submit",
      "email_address": "Email Address",
      "search_results" : "Search Results",
-     
-     
+     "confirm_delete_account"  : "Confirm delete account",
+     "are_you_sure_you_want_to_delete_your_account_permanently" : "Are you sure you want to delete your account permanently?",
+     "are_you_sure" : "Are you sure?",
+     "are_you_sure_you_want_to_sign_out_from_your_account" : "Are you sure you want to sign out from your account?",
 
 
 

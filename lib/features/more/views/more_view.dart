@@ -5,6 +5,8 @@ import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
 import 'package:bin_omaira_motors/helpers/kian_routes.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_appbar.dart';
+import 'package:bin_omaira_motors/widgets/app_dialog.dart';
+import 'package:bin_omaira_motors/widgets/app_text.dart';
 import 'package:bin_omaira_motors/widgets/app_white_body.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -109,7 +111,55 @@ class MoreView extends StatelessWidget {
             SizedBox(height: 24.height),
             MoreCard(
               title: "logout",
-              onTap: () {},
+              onTap: () {
+                AppDialog.show(
+                  hasButton: true,
+                  hasTopColouredContainer: false,
+                  dismissible: true,
+                  warning: true,
+                  buttonTitle: "logout".tr(),
+                  buttonOnTap: () {},
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(height: 62.height),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              alignment: Alignment.center,
+                              Utils.getAssetPNGPath("success_purchase"),
+                              fit: BoxFit.fill,
+                              height: 136.height,
+                              width: 136.width,
+                            ),
+                            SizedBox(height: 12.height),
+                            AppText(
+                              title: "are_you_sure".tr(),
+                              textAlign: TextAlign.center,
+                              color: AppColors.black,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                            ),
+                            SizedBox(height: 24.height),
+                            AppText(
+                              title:
+                                  "are_you_sure_you_want_to_sign_out_from_your_account"
+                                      .tr(),
+                              textAlign: TextAlign.center,
+                              color: AppColors.darkGray,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 14,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
               imagePath: "logout",
               customColor: AppColors.red,
               borderRadiusGeometry: BorderRadius.circular(14),

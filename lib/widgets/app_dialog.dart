@@ -13,6 +13,8 @@ class AppDialog extends StatelessWidget {
   final bool dismissible;
   final String title;
   final bool hasButton;
+  final bool hasTopColouredContainer;
+  final bool? warning;
   final String buttonTitle;
   final VoidCallback buttonOnTap;
 
@@ -24,6 +26,8 @@ class AppDialog extends StatelessWidget {
     required this.hasButton,
     required this.buttonTitle,
     required this.buttonOnTap,
+    required this.hasTopColouredContainer,
+    required this.warning,
   });
 
   static Future<dynamic> show({
@@ -33,11 +37,12 @@ class AppDialog extends StatelessWidget {
     bool hasButton = true,
     String? buttonTitle,
     VoidCallback? buttonOnTap,
+    bool? hasTopColouredContainer,
+    bool? warning,
   }) {
     return showDialog(
       context: CustomNavigator.context,
-      barrierDismissible: false,
-      // barrierColor: AppColors.secondary.withOpacity(0.7),
+      barrierDismissible: dismissible,
       builder: (context) {
         return AppDialog(
           child: child,
@@ -49,6 +54,8 @@ class AppDialog extends StatelessWidget {
               () {
                 // RouteUtils.navigateAndPopAll(const LoginView());
               },
+          hasTopColouredContainer: hasTopColouredContainer ?? true,
+          warning: warning,
         );
       },
     );
@@ -56,92 +63,103 @@ class AppDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final keyboardHeight = MediaQuery.of(context).viewInsets.bottom;
-    return Material(
-      color: Colors.transparent,
-      child: UnconstrainedBox(
-        constrainedAxis: Axis.horizontal,
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: null,
-            // border: Border.all(width: 4, color: AppColors.white),
-          ),
-          margin: EdgeInsets.only(
-            left: 20,
-            right: 20,
-            bottom: keyboardHeight,
-          ),
-          child: Column(
-            children: [
-              Container(
-                height: 60.height,
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: Color(0xffF9F9F9),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(25),
-                    topRight: Radius.circular(25),
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    AppText(
-                      padding: const EdgeInsets.symmetric(horizontal: 24),
-                      textAlign: TextAlign.start,
-                      title: title,
-                      color: AppColors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w400,
+    // final keyboardHeight = MediaQuery.of(context).viewInsets.bottom;
+    return Dialog(
+      insetPadding: const EdgeInsets.symmetric(horizontal: 24),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16.0),
+      ),
+      child: Container(
+        height: 400.height,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          color: null,
+        ),
+        child: Column(
+          children: [
+            hasTopColouredContainer
+                ? Container(
+                    height: 60.height,
+                    width: double.infinity,
+                    decoration: const BoxDecoration(
+                      color: Color(0xffF9F9F9),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(25),
+                        topRight: Radius.circular(25),
+                      ),
                     ),
-                    if (dismissible)
-                      UnconstrainedBox(
-                        child: InkWell(
-                          onTap: () => Navigator.pop(context),
-                          child: Container(
-                            height: 32.width,
-                            width: 32.width,
-                            margin: const EdgeInsets.symmetric(horizontal: 24),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(16),
-                              color: Colors.transparent,
-                            ),
-                            child: const Icon(
-                              Icons.close,
-                              color: AppColors.black,
-                              size: 20,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        hasTopColouredContainer
+                            ? AppText(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 24),
+                                textAlign: TextAlign.start,
+                                title: title,
+                                color: AppColors.black,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                              )
+                            : const SizedBox(),
+                        UnconstrainedBox(
+                          child: InkWell(
+                            onTap: () => Navigator.pop(context),
+                            child: Container(
+                              height: 32.width,
+                              width: 32.width,
+                              margin:
+                                  const EdgeInsets.symmetric(horizontal: 24),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16),
+                                color: Colors.transparent,
+                              ),
+                              child: const Icon(
+                                Icons.close,
+                                color: AppColors.black,
+                                size: 20,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                  ],
+                      ],
+                    ),
+                  )
+                : const SizedBox(),
+            Container(
+              decoration: BoxDecoration(
+                color: AppColors.white,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: const Radius.circular(16),
+                  bottomRight: const Radius.circular(16),
+                  topLeft: hasTopColouredContainer
+                      ? const Radius.circular(0)
+                      : const Radius.circular(16),
+                  topRight: hasTopColouredContainer
+                      ? const Radius.circular(0)
+                      : const Radius.circular(16),
                 ),
               ),
-              Container(
-                decoration: const BoxDecoration(
-                  color: AppColors.white,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(16),
-                    bottomRight: Radius.circular(16),
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    child,
-                    if (hasButton)
-                      Padding(
-                        padding: const EdgeInsets.all(12),
-                        child: AppButton(
-                          title: buttonTitle,
-                          onTap: buttonOnTap,
-                        ),
+              child: Column(
+                children: [
+                  child,
+                  SizedBox(height: 12.height),
+                  if (hasButton)
+                    Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: AppButton(
+                        title: buttonTitle,
+                        titleColor: warning! ? AppColors.red : AppColors.white,
+                        onTap: buttonOnTap,
+                        color: warning!
+                            ? AppColors.red.withOpacity(0.1)
+                            : AppColors.primary,
                       ),
-                  ],
-                ),
+                    ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
