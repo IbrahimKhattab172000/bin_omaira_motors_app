@@ -41,11 +41,13 @@ class _ChangeLanguageToggleState extends State<ChangeLanguageToggle> {
         padding: const EdgeInsets.all(16),
         child: Row(
           children: [
-            Image.asset(
-              Utils.getAssetPNGPath(widget.imagePath),
-              height: 24.height,
-              width: 24.height,
-              color: AppColors.grey,
+            Opacity(
+              opacity: widget.isSelected ? 1 : 0.3,
+              child: Image.asset(
+                Utils.getAssetPNGPath(widget.imagePath),
+                height: 24.height,
+                width: 24.height,
+              ),
             ),
             SizedBox(width: 12.width),
             AppText(
