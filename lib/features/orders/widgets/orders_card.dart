@@ -1,7 +1,7 @@
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
-import 'package:bin_omaira_motors/helpers/kian_routes.dart';
+import 'package:bin_omaira_motors/navigation/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/kian_routes.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_text.dart';
 import 'package:easy_localization/easy_localization.dart';

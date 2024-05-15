@@ -1,8 +1,8 @@
 import 'package:bin_omaira_motors/features/splash/view/pre_splash_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/kian_custom_navigator.dart';
 import 'package:bin_omaira_motors/helpers/pop_scaffold.dart';
-import 'package:bin_omaira_motors/main_pages/kian_nav/kian_nav_cubit/cubit.dart';
+import 'package:bin_omaira_motors/main_page/main_page_cubit/cubit.dart';
 import 'package:bin_omaira_motors/network/network_layer.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';

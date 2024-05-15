@@ -6,7 +6,7 @@ import 'package:bin_omaira_motors/features/contact_us/widgets/contact_us_logo.da
 import 'package:bin_omaira_motors/features/contact_us/widgets/contact_us_main_contacts.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/kian_custom_navigator.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_appbar.dart';
 import 'package:bin_omaira_motors/widgets/app_white_body.dart';

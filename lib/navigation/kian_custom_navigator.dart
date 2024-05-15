@@ -31,8 +31,8 @@ import 'package:bin_omaira_motors/features/usage_policy/view/usage_policy_view.d
 import 'package:bin_omaira_motors/features/verification/view/verification_view.dart';
 import 'package:bin_omaira_motors/features/welcome/view/welcome_view.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
-import 'package:bin_omaira_motors/helpers/kian_routes.dart';
-import 'package:bin_omaira_motors/main_pages/kian_nav/main_page_view.dart';
+import 'package:bin_omaira_motors/navigation/kian_routes.dart';
+import 'package:bin_omaira_motors/main_page/main_page_view.dart';
 import 'package:bin_omaira_motors/my_app.dart';
 import 'package:flutter/material.dart';
 

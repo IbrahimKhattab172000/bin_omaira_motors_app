@@ -25,7 +25,7 @@ class CarDetailsSpesification extends StatelessWidget {
               hasTopColouredContainer: true,
               title: "Engine specifications",
               child: ListView.separated(
-                itemCount: 4,
+                itemCount: 10,
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
                   return const CarDetailsSpecificationsElement(

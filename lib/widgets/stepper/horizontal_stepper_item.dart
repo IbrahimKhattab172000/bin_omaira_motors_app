@@ -29,12 +29,12 @@ class HorizontalStepperItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<PurchaseCubit, PurchaseState>(
       builder: (context, state) {
-        final cubit = PurchaseCubit.of(context);
+        // final cubit = PurchaseCubit.of(context);
 
         return Expanded(
           child: InkWell(
             onTap: () {
-              cubit.changeView(step);
+              // cubit.changeView(step);
             },
             child: Column(
               children: [

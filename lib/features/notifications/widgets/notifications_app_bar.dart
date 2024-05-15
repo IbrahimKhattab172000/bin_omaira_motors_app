@@ -1,5 +1,5 @@
 import 'package:bin_omaira_motors/helpers/colors.dart';
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/kian_custom_navigator.dart';
 import 'package:bin_omaira_motors/widgets/app_appbar.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';

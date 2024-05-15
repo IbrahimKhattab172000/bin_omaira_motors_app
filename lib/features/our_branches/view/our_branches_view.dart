@@ -2,7 +2,7 @@ import 'package:bin_omaira_motors/features/our_branches/widgets/our_branches_lis
 import 'package:bin_omaira_motors/features/our_branches/widgets/our_branches_logo.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/kian_custom_navigator.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_appbar.dart';
 import 'package:bin_omaira_motors/widgets/app_white_body.dart';

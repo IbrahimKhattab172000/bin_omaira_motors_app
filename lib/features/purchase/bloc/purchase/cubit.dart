@@ -1,6 +1,6 @@
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
-import 'package:bin_omaira_motors/helpers/kian_routes.dart';
-import 'package:bin_omaira_motors/main_pages/kian_nav/kian_nav_cubit/cubit.dart';
+import 'package:bin_omaira_motors/navigation/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/kian_routes.dart';
+import 'package:bin_omaira_motors/main_page/main_page_cubit/cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'state.dart';

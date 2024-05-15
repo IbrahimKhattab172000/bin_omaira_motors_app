@@ -1,6 +1,6 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:bin_omaira_motors/global_bloc/drop_down_selection/cubit.dart';
+import 'package:bin_omaira_motors/main_bloc/drop_down_selection/cubit.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
 import 'package:bin_omaira_motors/main_models/selection_item.dart';

@@ -1,8 +1,8 @@
 import 'package:bin_omaira_motors/features/more/widgets/more_card.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
-import 'package:bin_omaira_motors/helpers/kian_routes.dart';
+import 'package:bin_omaira_motors/navigation/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/kian_routes.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_appbar.dart';
 import 'package:bin_omaira_motors/widgets/app_dialog.dart';
@@ -113,51 +113,44 @@ class MoreView extends StatelessWidget {
               title: "logout",
               onTap: () {
                 AppDialog.show(
-                  dialogHeight: 380.height,
+                  // dialogHeight: 380.height,
                   hasButton: true,
                   hasTopColouredContainer: false,
                   dismissible: true,
                   warning: true,
                   buttonTitle: "logout".tr(),
                   buttonOnTap: () {},
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(height: 62.height),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              alignment: Alignment.center,
-                              Utils.getAssetPNGPath("success_purchase"),
-                              fit: BoxFit.fill,
-                              height: 136.height,
-                              width: 136.width,
-                            ),
-                            SizedBox(height: 12.height),
-                            AppText(
-                              title: "are_you_sure".tr(),
-                              textAlign: TextAlign.center,
-                              color: AppColors.black,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16,
-                            ),
-                            SizedBox(height: 24.height),
-                            AppText(
-                              title:
-                                  "are_you_sure_you_want_to_sign_out_from_your_account"
-                                      .tr(),
-                              textAlign: TextAlign.center,
-                              color: AppColors.darkGray,
-                              fontWeight: FontWeight.w300,
-                              fontSize: 14,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      SizedBox(height: 62.height),
+                      Image.asset(
+                        alignment: Alignment.center,
+                        Utils.getAssetPNGPath("success_purchase"),
+                        fit: BoxFit.fill,
+                        height: 136.height,
+                        width: 136.width,
+                      ),
+                      SizedBox(height: 12.height),
+                      AppText(
+                        title: "are_you_sure".tr(),
+                        textAlign: TextAlign.center,
+                        color: AppColors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16,
+                      ),
+                      SizedBox(height: 24.height),
+                      AppText(
+                        title:
+                            "are_you_sure_you_want_to_sign_out_from_your_account"
+                                .tr(),
+                        textAlign: TextAlign.center,
+                        color: AppColors.darkGray,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                      ),
+                    ],
                   ),
                 );
               },

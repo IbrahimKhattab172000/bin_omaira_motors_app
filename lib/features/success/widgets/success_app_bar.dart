@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:bin_omaira_motors/helpers/colors.dart';
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/kian_custom_navigator.dart';
 import 'package:bin_omaira_motors/widgets/app_appbar.dart';
 
 class SuccessAppBar extends StatelessWidget implements PreferredSizeWidget {

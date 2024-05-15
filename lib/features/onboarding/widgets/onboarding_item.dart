@@ -1,5 +1,5 @@
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
-import 'package:bin_omaira_motors/helpers/kian_routes.dart';
+import 'package:bin_omaira_motors/navigation/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/kian_routes.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:bin_omaira_motors/features/onboarding/models/boarding.dart';

@@ -2,7 +2,7 @@
 
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/kian_custom_navigator.dart';
 import 'package:bin_omaira_motors/widgets/app_button.dart';
 import 'package:bin_omaira_motors/widgets/app_text.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -17,7 +17,7 @@ class AppDialog extends StatelessWidget {
   final bool? warning;
   final String buttonTitle;
   final VoidCallback buttonOnTap;
-  final double dialogHeight;
+  // final double dialogHeight;
 
   const AppDialog({
     super.key,
@@ -29,7 +29,7 @@ class AppDialog extends StatelessWidget {
     required this.buttonOnTap,
     required this.hasTopColouredContainer,
     required this.warning,
-    required this.dialogHeight,
+    // required this.dialogHeight,
   });
 
   static Future<dynamic> show({
@@ -41,7 +41,7 @@ class AppDialog extends StatelessWidget {
     VoidCallback? buttonOnTap,
     bool? hasTopColouredContainer,
     bool? warning,
-    double dialogHeight = 300,
+    // double dialogHeight = 300,
   }) {
     return showDialog(
       context: CustomNavigator.context,
@@ -50,7 +50,7 @@ class AppDialog extends StatelessWidget {
         return AppDialog(
           child: child,
           dismissible: dismissible,
-          dialogHeight: dialogHeight,
+          // dialogHeight: dialogHeight,
           title: title ?? "no_data".tr(),
           hasButton: hasButton,
           buttonTitle: buttonTitle ?? "login".tr(),
@@ -69,18 +69,21 @@ class AppDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     // final keyboardHeight = MediaQuery.of(context).viewInsets.bottom;
     return Dialog(
-      insetPadding: const EdgeInsets.symmetric(horizontal: 24),
+      insetPadding: const EdgeInsets.symmetric(
+        horizontal: 24,
+      ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16.0),
       ),
       child: Container(
-        height: dialogHeight,
+        // height: dialogHeight,
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           color: null,
         ),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             hasTopColouredContainer
                 ? Container(
@@ -146,6 +149,7 @@ class AppDialog extends StatelessWidget {
                 ),
               ),
               child: Column(
+                // mainAxisSize: MainAxisSize.min,
                 children: [
                   child,
                   SizedBox(height: 12.height),

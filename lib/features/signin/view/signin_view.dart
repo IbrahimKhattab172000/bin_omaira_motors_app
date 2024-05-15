@@ -5,7 +5,7 @@ import 'package:bin_omaira_motors/features/signin/widgets/signin_image_with_info
 import 'package:bin_omaira_motors/features/signin/widgets/signin_no_account.dart';
 import 'package:bin_omaira_motors/helpers/colors.dart';
 import 'package:bin_omaira_motors/helpers/dimentions.dart';
-import 'package:bin_omaira_motors/helpers/kian_custom_navigator.dart';
+import 'package:bin_omaira_motors/navigation/kian_custom_navigator.dart';
 import 'package:bin_omaira_motors/helpers/utils.dart';
 import 'package:bin_omaira_motors/widgets/app_appbar.dart';
 import 'package:flutter/material.dart';
